@@ -9,4 +9,42 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="FancyButtonContainer">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="FancyButtonImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="FancyButtonText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="HorizontalDivider">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/TransparentWhite</item>
+    </style>
+
+    <style name="VerticalDivider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:background">@color/TransparentWhite</item>
+    </style>
+
 </resources>

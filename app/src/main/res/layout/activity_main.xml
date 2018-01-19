@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,7 +17,7 @@
         android:scaleType="centerCrop" />
 
     <RelativeLayout
-        android:id="@+id/btn_container"
+        android:id="@+id/screen_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="180dp">
+            android:layout_marginTop="140dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -53,6 +54,99 @@
                 android:layout_gravity="center" />
 
         </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:id="@+id/museums_btn"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                style="@style/FancyButtonContainer">
+
+                <ImageView
+                    android:src="@drawable/ic_museums"
+                    style="@style/FancyButtonImage" />
+
+                <TextView
+                    android:text="Museums"
+                    style="@style/FancyButtonText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/parks_btn"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/museums_btn"
+                style="@style/FancyButtonContainer">
+
+                <ImageView
+                    android:src="@drawable/ic_parks"
+                    style="@style/FancyButtonImage" />
+
+                <TextView
+                    android:text="Parks"
+                    style="@style/FancyButtonText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/palaces_btn"
+                android:layout_below="@id/museums_btn"
+                style="@style/FancyButtonContainer">
+
+                <ImageView
+                    android:src="@drawable/ic_palaces"
+                    style="@style/FancyButtonImage" />
+
+                <TextView
+                    android:text="Palaces"
+                    style="@style/FancyButtonText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/monuments_btn"
+                android:layout_below="@id/parks_btn"
+                android:layout_toRightOf="@id/palaces_btn"
+                style="@style/FancyButtonContainer">
+
+                <ImageView
+                    android:src="@drawable/ic_monuments"
+                    style="@style/FancyButtonImage" />
+
+                <TextView
+                    android:text="Monuments"
+                    style="@style/FancyButtonText" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/museums_btn"
+                style="@style/VerticalDivider" />
+
+            <View
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/museums_btn"
+                style="@style/HorizontalDivider" />
+
+            <View
+                android:layout_toRightOf="@id/palaces_btn"
+                android:layout_below="@id/museums_btn"
+                style="@style/VerticalDivider" />
+
+            <View
+                android:layout_toRightOf="@id/museums_btn"
+                android:layout_below="@id/parks_btn"
+                style="@style/HorizontalDivider" />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

@@ -6,7 +6,7 @@
 
     <color name="Yellow">#ffba00</color>
     <color name="YellowDark">#c18d00</color>
-    <color name="TransparentYellow">#8dffba00</color>
+    <color name="TransparentYellow">#b4ffba00</color>
     <color name="White">#fafafa</color>
     <color name="TransparentWhite">#c3fafafa</color>
 </resources>
