@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setFancyClickListener(R.id.museums_btn, MuseumsActivity.class);
+        setFancyClickListener(R.id.parks_btn, ParksActivity.class);
+        setFancyClickListener(R.id.palaces_btn, PalacesActivity.class);
+        setFancyClickListener(R.id.monuments_btn, MonumentsActivity.class);
     }
 
     private void setFancyClickListener(int buttonId, final Class activity) {

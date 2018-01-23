@@ -25,6 +25,36 @@
                 android:value=".MainActivity" />
 
         </activity>
+        <activity
+            android:name=".ParksActivity"
+            android:label="@string/parks"
+            android:parentActivityName=".MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+        </activity>
+        <activity
+            android:name=".PalacesActivity"
+            android:label="@string/palaces"
+            android:parentActivityName=".MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+        </activity>
+        <activity
+            android:name=".MonumentsActivity"
+            android:label="@string/monuments"
+            android:parentActivityName=".MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+        </activity>
     </application>
 
 </manifest>
