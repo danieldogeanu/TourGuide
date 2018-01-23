@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/RootStyle"
+    android:orientation="vertical"
+    android:paddingTop="25dp">
+
+    <RelativeLayout
+        android:id="@+id/category_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageButton
+            android:id="@+id/category_back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_chevron_left"
+            android:tint="@color/White"  />
+
+        <TextView
+            android:id="@+id/category_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/category_back_btn"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/source_sans_pro"
+            android:text="@string/city_name"
+            android:textColor="@color/TransparentWhite"
+            android:textSize="14sp"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/category_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_below="@id/category_subtitle"
+            android:layout_toRightOf="@id/category_back_btn"
+            android:fontFamily="@font/open_sans_extrabold"
+            android:text="@string/museums"
+            android:textColor="@color/White"
+            android:textSize="30sp"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</LinearLayout>
