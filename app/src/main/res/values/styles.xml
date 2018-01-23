@@ -9,7 +9,66 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
-    <style name="FancyButtonContainer">
+    <style name="RootStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/Yellow</item>
+    </style>
+
+    <style name="MainActicityBackgroundImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="MainScreenContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/gradient_bg</item>
+    </style>
+
+    <style name="MainCityTitle_Container">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">140dp</item>
+    </style>
+
+    <style name="MainCityTitle_CityName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/open_sans_extrabold</item>
+        <item name="android:textSize">42sp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MainCityTitle_Subtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">-4dp</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/TransparentWhite</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="FancyButtonsContainer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">64dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="FancyButton">
         <item name="android:orientation">vertical</item>
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">100dp</item>

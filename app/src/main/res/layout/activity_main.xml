@@ -1,73 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/Yellow"
+    style="@style/RootStyle"
     tools:context="com.danieldogeanu.android.tourguide.MainActivity">
 
     <ImageView
-        android:id="@+id/top_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/main_bg_image"
         android:src="@drawable/ateneul_roman"
-        android:scaleType="centerCrop" />
+        style="@style/MainActicityBackgroundImage" />
 
     <RelativeLayout
         android:id="@+id/screen_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/gradient_bg">
+        style="@style/MainScreenContainer">
 
         <LinearLayout
             android:id="@+id/city_title"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="140dp">
+            style="@style/MainCityTitle_Container">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans_extrabold"
                 android:text="@string/city_name"
-                android:textSize="42sp"
-                android:textColor="@color/White"
-                android:textAllCaps="false" />
+                style="@style/MainCityTitle_CityName" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-4dp"
-                android:fontFamily="@font/source_sans_pro"
                 android:text="@string/app_name"
-                android:textSize="16sp"
-                android:textColor="@color/TransparentWhite"
-                android:textAllCaps="true"
-                android:layout_gravity="center" />
+                style="@style/MainCityTitle_Subtitle" />
 
         </LinearLayout>
 
         <RelativeLayout
-            android:id="@+id/btn_container"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="64dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true">
+            android:id="@+id/btns_container"
+            style="@style/FancyButtonsContainer">
 
             <LinearLayout
                 android:id="@+id/museums_btn"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                style="@style/FancyButtonContainer">
+                style="@style/FancyButton">
 
                 <ImageView
                     android:src="@drawable/ic_museums"
@@ -83,7 +51,7 @@
                 android:id="@+id/parks_btn"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/museums_btn"
-                style="@style/FancyButtonContainer">
+                style="@style/FancyButton">
 
                 <ImageView
                     android:src="@drawable/ic_parks"
@@ -98,7 +66,7 @@
             <LinearLayout
                 android:id="@+id/palaces_btn"
                 android:layout_below="@id/museums_btn"
-                style="@style/FancyButtonContainer">
+                style="@style/FancyButton">
 
                 <ImageView
                     android:src="@drawable/ic_palaces"
@@ -114,7 +82,7 @@
                 android:id="@+id/monuments_btn"
                 android:layout_below="@id/parks_btn"
                 android:layout_toRightOf="@id/palaces_btn"
-                style="@style/FancyButtonContainer">
+                style="@style/FancyButton">
 
                 <ImageView
                     android:src="@drawable/ic_monuments"
