@@ -9,4 +9,38 @@
     <color name="TransparentYellow">#b4ffba00</color>
     <color name="White">#fafafa</color>
     <color name="TransparentWhite">#c3fafafa</color>
+
+    <color name="Red">#F44336</color>
+    <color name="TransparentRed">#c8f44336</color>
+    <color name="Pink">#E91E63</color>
+    <color name="TransparentPink">#c8e91e63</color>
+    <color name="Purple">#9C27B0</color>
+    <color name="TransparentPurple">#c89c27b0</color>
+    <color name="DeepPurple">#673AB7</color>
+    <color name="TransparentDeepPurple">#c8673AB7</color>
+    <color name="Indigo">#3F51B5</color>
+    <color name="TransparentIndigo">#c83F51B5</color>
+    <color name="Blue">#2196F3</color>
+    <color name="TransparentBlue">#c82196F3</color>
+    <color name="LightBlue">#03A9F4</color>
+    <color name="TransparentLightBlue">#c803A9F4</color>
+    <color name="Cyan">#00BCD4</color>
+    <color name="TransparentCyan">#c800BCD4</color>
+    <color name="Teal">#009688</color>
+    <color name="TransparentTeal">#c8009688</color>
+    <color name="Green">#4CAF50</color>
+    <color name="TransparentGreen">#c84CAF50</color>
+    <color name="LightGreen">#8BC34A</color>
+    <color name="TransparentLightGreen">#c88BC34A</color>
+    <color name="Lime">#CDDC39</color>
+    <color name="TransparentLime">#c8CDDC39</color>
+    <color name="Amber">#FFC107</color>
+    <color name="TransparentAmber">#c8FFC107</color>
+    <color name="Orange">#FF9800</color>
+    <color name="TransparentOrange">#c8FF9800</color>
+    <color name="DeepOrange">#FF5722</color>
+    <color name="TransparentDeepOrange">#c8FF5722</color>
+    <color name="Brown">#795548</color>
+    <color name="TransparentBrown">#c8795548</color>
+
 </resources>
