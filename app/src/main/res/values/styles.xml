@@ -154,4 +154,58 @@
         <item name="android:textSize">30sp</item>
     </style>
 
+    <style name="CategoryItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+    </style>
+
+    <style name="CategoryItemBackgroundImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="CategoryItemAddress">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_above">@id/cat_item_title</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">48dp</item>
+        <item name="android:drawableLeft">@drawable/ic_location_pin</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/LessTransparentWhite</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CategoryItemTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">48dp</item>
+        <item name="android:fontFamily">@font/open_sans_extrabold</item>
+        <item name="android:lineSpacingExtra">-2dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="CategoryItemArrow">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:src">@drawable/ic_chevron_right_high</item>
+    </style>
+
 </resources>
