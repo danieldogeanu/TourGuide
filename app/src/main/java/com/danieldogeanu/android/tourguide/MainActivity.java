@@ -13,13 +13,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setFancyClickListener(R.id.museums_btn, MuseumsActivity.class);
-        setFancyClickListener(R.id.parks_btn, ParksActivity.class);
-        setFancyClickListener(R.id.palaces_btn, PalacesActivity.class);
-        setFancyClickListener(R.id.monuments_btn, MonumentsActivity.class);
+        openActivity(R.id.museums_btn, MuseumsActivity.class);
+        openActivity(R.id.parks_btn, ParksActivity.class);
+        openActivity(R.id.palaces_btn, PalacesActivity.class);
+        openActivity(R.id.monuments_btn, MonumentsActivity.class);
     }
 
-    private void setFancyClickListener(int buttonId, final Class activity) {
+    private void openActivity(int buttonId, final Class activity) {
         LinearLayout button = (LinearLayout) findViewById(buttonId);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
