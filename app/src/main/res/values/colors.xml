@@ -9,6 +9,7 @@
     <color name="TransparentYellow">#b4ffba00</color>
     <color name="White">#fafafa</color>
     <color name="TransparentWhite">#c3fafafa</color>
+    <color name="LessTransparentWhite">#dcffffff</color>
 
     <color name="Red">#F44336</color>
     <color name="TransparentRed">#c8f44336</color>
