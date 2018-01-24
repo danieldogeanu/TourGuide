@@ -15,6 +15,11 @@
         <item name="android:background">@color/Yellow</item>
     </style>
 
+    <style name="RootStyle.Category">
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">25dp</item>
+    </style>
+
     <style name="MainActicityBackgroundImage">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -31,7 +36,7 @@
         <item name="android:background">@drawable/gradient_bg</item>
     </style>
 
-    <style name="MainCityTitle_Container">
+    <style name="MainTitle">
         <item name="android:orientation">vertical</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -40,7 +45,7 @@
         <item name="android:layout_marginTop">140dp</item>
     </style>
 
-    <style name="MainCityTitle_CityName">
+    <style name="MainTitleCityName">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/open_sans_extrabold</item>
@@ -49,7 +54,7 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
-    <style name="MainCityTitle_Subtitle">
+    <style name="MainTitleSubtitle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">-4dp</item>
@@ -104,6 +109,46 @@
         <item name="android:layout_width">1dp</item>
         <item name="android:layout_height">120dp</item>
         <item name="android:background">@color/TransparentWhite</item>
+    </style>
+
+    <style name="CategoryActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">90dp</item>
+    </style>
+
+    <style name="CategoryActionBarBackButton">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:src">@drawable/ic_chevron_left</item>
+        <item name="android:tint">@color/White</item>
+    </style>
+
+    <style name="CategoryActionBarSubtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_toRightOf">@id/category_back_btn</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/TransparentWhite</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CategoryActionBarTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/category_subtitle</item>
+        <item name="android:layout_toRightOf">@id/category_back_btn</item>
+        <item name="android:layout_marginTop">-10dp</item>
+        <item name="android:fontFamily">@font/open_sans_extrabold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">30sp</item>
     </style>
 
 </resources>
