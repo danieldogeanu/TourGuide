@@ -4,11 +4,14 @@
     android:id="@+id/category_item"
     style="@style/CategoryItem">
 
+
     <ImageView
         android:id="@+id/cat_bg_image"
         style="@style/CategoryItemBackgroundImage"
-        tools:src="@drawable/history_museum"
-        tools:tint="@color/TransparentPurple" />
+        tools:src="@drawable/history_museum" />
+
+    <ImageView
+        style="@style/CategoryItemBackgroundImage.Overlay" />
 
     <TextView
         android:id="@+id/cat_item_address"

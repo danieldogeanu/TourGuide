@@ -32,19 +32,16 @@ public class MonumentsActivity extends AppCompatActivity {
 
         ArrayList<Landmark> monuments = new ArrayList<>();
 
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentPink));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentAmber));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentBlue));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentGreen));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentDeepOrange));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentCyan));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentPurple));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentBrown));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentTeal));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentLime));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentRed));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentLightGreen));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum, R.color.TransparentDeepPurple));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
 
         ListView listView = (ListView) findViewById(R.id.cat_items_list);
         LandmarkAdapter adapter = new LandmarkAdapter(MonumentsActivity.this, monuments, listView);
