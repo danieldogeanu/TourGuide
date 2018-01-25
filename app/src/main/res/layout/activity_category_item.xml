@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/category_item"
     style="@style/CategoryItem">
 
     <ImageView
         android:id="@+id/cat_bg_image"
         style="@style/CategoryItemBackgroundImage"
-        android:src="@drawable/history_museum"
-        android:tint="@color/TransparentPurple" />
+        tools:src="@drawable/history_museum"
+        tools:tint="@color/TransparentPurple" />
 
     <TextView
         android:id="@+id/cat_item_address"
-        android:text="Calea Victoriei 12, Bucharest"
+        tools:text="Calea Victoriei 12, Bucharest"
         style="@style/CategoryItemAddress" />
 
     <TextView
         android:id="@+id/cat_item_title"
-        android:text="National Museum of Romanian History"
+        tools:text="National Museum of Romanian History"
         style="@style/CategoryItemTitle" />
 
     <ImageView

@@ -1,8 +1,10 @@
 package com.danieldogeanu.android.tourguide;
 
 import android.app.Activity;
+import android.graphics.ColorFilter;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,8 +45,9 @@ public class LandmarkAdapter extends ArrayAdapter<Landmark> {
         catItemAddress.setText(currentLandmark.getAddress());
 
         ImageView catBgImage = (ImageView) listItemView.findViewById(R.id.cat_bg_image);
+        int color = ContextCompat.getColor(getContext(), currentLandmark.getColorId());
         catBgImage.setImageResource(currentLandmark.getImageId());
-        catBgImage.setColorFilter(currentLandmark.getColorId());
+        catBgImage.setColorFilter(color);
 
         return listItemView;
     }
