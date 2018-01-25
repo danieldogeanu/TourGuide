@@ -14,7 +14,7 @@ public class Landmark {
         mColorResourceId = color;
     }
 
-    public String getLandmark() {
+    public String getLandmarkName() {
         return mLandmark;
     }
 
