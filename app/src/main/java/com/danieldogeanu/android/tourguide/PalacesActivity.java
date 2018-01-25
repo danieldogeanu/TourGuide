@@ -16,7 +16,7 @@ public class PalacesActivity extends AppCompatActivity {
 
         // Set Category Title
         TextView categoryTitle = (TextView) findViewById(R.id.category_title);
-        categoryTitle.setText(getText(R.string.palaces));
+        categoryTitle.setText(getText(R.string.palaces_title));
 
         // Add Back (Up) Functionality
         ImageButton backButton = (ImageButton) findViewById(R.id.category_back_btn);

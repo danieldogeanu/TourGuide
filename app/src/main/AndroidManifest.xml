@@ -17,7 +17,7 @@
         </activity>
         <activity
             android:name=".MuseumsActivity"
-            android:label="@string/museums"
+            android:label="@string/museums_title"
             android:parentActivityName=".MainActivity">
 
             <meta-data
@@ -27,7 +27,7 @@
         </activity>
         <activity
             android:name=".ParksActivity"
-            android:label="@string/parks"
+            android:label="@string/parks_title"
             android:parentActivityName=".MainActivity">
 
             <meta-data
@@ -37,7 +37,7 @@
         </activity>
         <activity
             android:name=".PalacesActivity"
-            android:label="@string/palaces"
+            android:label="@string/palaces_title"
             android:parentActivityName=".MainActivity">
 
             <meta-data
@@ -47,7 +47,7 @@
         </activity>
         <activity
             android:name=".MonumentsActivity"
-            android:label="@string/monuments"
+            android:label="@string/monuments_title"
             android:parentActivityName=".MainActivity">
 
             <meta-data

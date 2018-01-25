@@ -16,7 +16,7 @@ public class MuseumsActivity extends AppCompatActivity {
 
         // Set Category Title
         TextView categoryTitle = (TextView) findViewById(R.id.category_title);
-        categoryTitle.setText(getText(R.string.museums));
+        categoryTitle.setText(getText(R.string.museums_title));
 
         // Add Back (Up) Functionality
         ImageButton backButton = (ImageButton) findViewById(R.id.category_back_btn);

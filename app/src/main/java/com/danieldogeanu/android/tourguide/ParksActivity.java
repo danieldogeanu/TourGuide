@@ -16,7 +16,7 @@ public class ParksActivity extends AppCompatActivity {
 
         // Set Category Title
         TextView categoryTitle = (TextView) findViewById(R.id.category_title);
-        categoryTitle.setText(getText(R.string.parks));
+        categoryTitle.setText(getText(R.string.parks_title));
 
         // Add Back (Up) Functionality
         ImageButton backButton = (ImageButton) findViewById(R.id.category_back_btn);

@@ -19,7 +19,7 @@ public class MonumentsActivity extends AppCompatActivity {
 
         // Set Category Title
         TextView categoryTitle = (TextView) findViewById(R.id.category_title);
-        categoryTitle.setText(getText(R.string.monuments));
+        categoryTitle.setText(getText(R.string.monuments_title));
 
         // Add Back (Up) Functionality
         ImageButton backButton = (ImageButton) findViewById(R.id.category_back_btn);

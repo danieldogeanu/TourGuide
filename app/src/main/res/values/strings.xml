@@ -1,8 +1,82 @@
 <resources>
     <string name="app_name">Tour Guide</string>
     <string name="city_name">Bucharest</string>
-    <string name="museums">Museums</string>
-    <string name="parks">Parks</string>
-    <string name="palaces">Palaces</string>
-    <string name="monuments">Monuments</string>
+
+    <string name="museums_title">Museums</string>
+    <string name="parks_title">Parks</string>
+    <string name="palaces_title">Palaces</string>
+    <string name="monuments_title">Monuments</string>
+
+    <!--MUSEUMS-->
+    <string-array name="museums_names">
+        <item>National Museum of Romanian History</item>
+        <item>National Military Museum</item>
+        <item>Museum of the Romanian Railways</item>
+    </string-array>
+    <string-array name="museums_addresses">
+        <item>Calea Victoriei 12, Bucharest</item>
+        <item>Strada Mircea Vulcănescu 125&#8211;127, Bucharest</item>
+        <item>Strada Gării de Nord, Bucharest</item>
+    </string-array>
+    <string-array name="museums_descriptions">
+
+    </string-array>
+    <string-array name="museums_hours">
+
+    </string-array>
+    <string-array name="museums_phones">
+
+    </string-array>
+
+    <!--PARKS-->
+    <string-array name="parks_names">
+        <item>Herastrau Park</item>
+    </string-array>
+    <string-array name="parks_addresses">
+        <item>Bucharest</item>
+    </string-array>
+    <string-array name="parks_descriptions">
+
+    </string-array>
+    <string-array name="parks_hours">
+
+    </string-array>
+    <string-array name="parks_phones">
+
+    </string-array>
+
+    <!--PALACES-->
+    <string-array name="palaces_names">
+        <item>Palace of the Parliament</item>
+    </string-array>
+    <string-array name="palaces_addresses">
+        <item>Strada Izvor 2&#8211;4, Bucharest</item>
+    </string-array>
+    <string-array name="palaces_descriptions">
+
+    </string-array>
+    <string-array name="palaces_hours">
+
+    </string-array>
+    <string-array name="palaces_phones">
+
+    </string-array>
+
+    <!--MONUMENTS-->
+    <string-array name="monuments_names">
+
+    </string-array>
+    <string-array name="monuments_addresses">
+
+    </string-array>
+    <string-array name="monuments_descriptions">
+
+    </string-array>
+    <string-array name="monuments_hours">
+
+    </string-array>
+    <string-array name="monuments_phones">
+
+    </string-array>
+
 </resources>
