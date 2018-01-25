@@ -22,4 +22,8 @@
 
     </RelativeLayout>
 
+    <ListView
+        android:id="@+id/cat_items_list"
+        style="@style/CategoryItemsList" />
+
 </LinearLayout>
