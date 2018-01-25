@@ -32,16 +32,11 @@ public class MonumentsActivity extends AppCompatActivity {
 
         ArrayList<Landmark> monuments = new ArrayList<>();
 
+        monuments.add(new Landmark("Herastrau Park", "Bucharest", R.drawable.herastrau_park));
+        monuments.add(new Landmark("Palace of the Parliament", "Strada Izvor 2-4, Bucharest", R.drawable.casa_poporului));
         monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
-        monuments.add(new Landmark("National Museum of Romanian History", "Calea Victoriei 12, Bucharest", R.drawable.history_museum));
+        monuments.add(new Landmark("National Military Museum", "Strada Mircea Vulcănescu 125-127, Bucharest", R.drawable.military_museum));
+        monuments.add(new Landmark("Museum of the Romanian Railways", "Strada Gării de Nord, Bucharest", R.drawable.railroad_museum));
 
         ListView listView = (ListView) findViewById(R.id.cat_items_list);
         LandmarkAdapter adapter = new LandmarkAdapter(MonumentsActivity.this, monuments, listView);
