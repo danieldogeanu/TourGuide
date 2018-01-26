@@ -55,6 +55,11 @@
                 android:value=".MainActivity" />
 
         </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/details_title">
+
+        </activity>
     </application>
 
 </manifest>

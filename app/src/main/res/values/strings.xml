@@ -2,6 +2,7 @@
     <string name="app_name">Tour Guide</string>
     <string name="city_name">Bucharest</string>
 
+    <string name="details_title">Details</string>
     <string name="museums_title">Museums</string>
     <string name="parks_title">Parks</string>
     <string name="palaces_title">Palaces</string>
