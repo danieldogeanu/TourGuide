@@ -3,6 +3,14 @@
     <string name="city_name">Bucharest</string>
 
     <string name="details_title">Details</string>
+    <string name="about_section_title">About</string>
+    <string name="details_section_title">Details</string>
+    <string name="details_address_title">Address:</string>
+    <string name="details_hours_title">Hours:</string>
+    <string name="details_phone_title">Phone:</string>
+    <string name="details_call_btn">Call</string>
+    <string name="details_directions_btn">Get Directions</string>
+
     <string name="museums_title">Museums</string>
     <string name="parks_title">Parks</string>
     <string name="palaces_title">Palaces</string>
@@ -79,5 +87,11 @@
     <string-array name="monuments_phones">
 
     </string-array>
+
+    <string name="placeholder_name">National Museum of Romanian History</string>
+    <string name="placeholder_address">Calea Victoriei 12, Bucharest</string>
+    <string name="placeholder_description">The National Museum of Romanian History is a museum located on Calea Victoriei in Bucharest, Romania, which contains Romanian historical artifacts from prehistoric times up to modern times.</string>
+    <string name="placeholder_hours">09:00 &#8211; 17:00</string>
+    <string name="placeholder_phone">+40 21 315 8207</string>
 
 </resources>

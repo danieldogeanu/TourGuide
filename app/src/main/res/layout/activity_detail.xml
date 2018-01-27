@@ -30,7 +30,7 @@
 
             <TextView
                 android:id="@+id/detail_title"
-                android:text="National Museum of Romanian History"
+                android:text="@string/placeholder_name"
                 style="@style/DetailTitle" />
 
         </RelativeLayout>
@@ -47,7 +47,7 @@
                 android:id="@+id/about_section_title"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:text="About"
+                android:text="@string/about_section_title"
                 style="@style/DetailContentSectionTitle" />
 
             <View
@@ -58,7 +58,7 @@
             <TextView
                 android:id="@+id/about_section_text"
                 android:layout_below="@id/about_section_divider"
-                android:text="The National Museum of Romanian History is a museum located on Calea Victoriei in Bucharest, Romania, which contains Romanian historical artifacts from prehistoric times up to modern times."
+                android:text="@string/placeholder_description"
                 style="@style/DetailContentText" />
 
             <View
@@ -69,7 +69,7 @@
             <TextView
                 android:id="@+id/details_section_title"
                 android:layout_below="@id/below_about_section_divider"
-                android:text="Details"
+                android:text="@string/details_section_title"
                 style="@style/DetailContentSectionTitle" />
 
             <View
@@ -84,12 +84,12 @@
 
                 <TextView
                     android:id="@+id/details_address_title"
-                    android:text="Address:"
+                    android:text="@string/details_address_title"
                     style="@style/DetailsInfoLineHeading" />
 
                 <TextView
                     android:id="@+id/details_address_content"
-                    android:text="Calea Victoriei 12, Bucharest"
+                    android:text="@string/placeholder_address"
                     style="@style/DetailsInfoLineContent" />
 
             </LinearLayout>
@@ -101,12 +101,12 @@
 
                 <TextView
                     android:id="@+id/details_hours_title"
-                    android:text="Hours:"
+                    android:text="@string/details_hours_title"
                     style="@style/DetailsInfoLineHeading" />
 
                 <TextView
                     android:id="@+id/details_hours_content"
-                    android:text="09:00 - 17:00"
+                    android:text="@string/placeholder_hours"
                     style="@style/DetailsInfoLineContent" />
 
             </LinearLayout>
@@ -118,12 +118,12 @@
 
                 <TextView
                     android:id="@+id/details_phone_title"
-                    android:text="Phone:"
+                    android:text="@string/details_phone_title"
                     style="@style/DetailsInfoLineHeading" />
 
                 <TextView
                     android:id="@+id/details_phone_content"
-                    android:text="+40 21 315 8207"
+                    android:text="@string/placeholder_phone"
                     style="@style/DetailsInfoLineContent" />
 
             </LinearLayout>
@@ -141,8 +141,8 @@
                 android:background="@color/Black">
 
                 <Button
-                    android:id="@+id/detail_phone_btn"
-                    android:text="Call"
+                    android:id="@+id/detail_call_btn"
+                    android:text="@string/details_call_btn"
                     style="@style/DetailCtaButton" />
 
             </FrameLayout>
@@ -154,7 +154,7 @@
 
                 <Button
                     android:id="@+id/detail_directions_btn"
-                    android:text="Get Directions"
+                    android:text="@string/details_directions_btn"
                     style="@style/DetailCtaButton" />
 
             </FrameLayout>
