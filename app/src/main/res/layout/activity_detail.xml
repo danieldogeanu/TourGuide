@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/Root">
 
     <RelativeLayout
@@ -12,7 +13,7 @@
 
             <ImageView
                 android:id="@+id/detail_header_image"
-                android:src="@drawable/history_museum"
+                tools:src="@drawable/history_museum"
                 style="@style/DetailHeaderImage" />
 
             <ImageView
@@ -25,12 +26,12 @@
 
             <TextView
                 android:id="@+id/detail_city"
-                android:text="@string/city_name"
+                tools:text="@string/city_name"
                 style="@style/DetailCityName" />
 
             <TextView
                 android:id="@+id/detail_title"
-                android:text="@string/placeholder_name"
+                tools:text="@string/placeholder_name"
                 style="@style/DetailTitle" />
 
         </RelativeLayout>
@@ -58,7 +59,7 @@
             <TextView
                 android:id="@+id/about_section_text"
                 android:layout_below="@id/about_section_divider"
-                android:text="@string/placeholder_description"
+                tools:text="@string/placeholder_description"
                 style="@style/DetailContentText" />
 
             <View
@@ -89,7 +90,7 @@
 
                 <TextView
                     android:id="@+id/details_address_content"
-                    android:text="@string/placeholder_address"
+                    tools:text="@string/placeholder_address"
                     style="@style/DetailsInfoLineContent" />
 
             </LinearLayout>
@@ -106,7 +107,7 @@
 
                 <TextView
                     android:id="@+id/details_hours_content"
-                    android:text="@string/placeholder_hours"
+                    tools:text="@string/placeholder_hours"
                     style="@style/DetailsInfoLineContent" />
 
             </LinearLayout>
@@ -123,7 +124,7 @@
 
                 <TextView
                     android:id="@+id/details_phone_content"
-                    android:text="@string/placeholder_phone"
+                    tools:text="@string/placeholder_phone"
                     style="@style/DetailsInfoLineContent" />
 
             </LinearLayout>
