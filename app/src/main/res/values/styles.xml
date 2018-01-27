@@ -216,4 +216,164 @@
         <item name="android:drawSelectorOnTop">true</item>
     </style>
 
+    <style name="DetailContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="DetailHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="DetailHeaderImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="DetailHeaderOverlay">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:src">@drawable/detail_header_bg</item>
+    </style>
+
+    <style name="DetailBackButton">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:src">@drawable/ic_chevron_left</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:tint">@color/White</item>
+    </style>
+
+    <style name="DetailCityName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_above">@id/detail_title</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/LessTransparentWhite</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="DetailTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:fontFamily">@font/open_sans_extrabold</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:lineSpacingExtra">-4dp</item>
+        <item name="android:maxLines">3</item>
+    </style>
+
+    <style name="DetailContentBackground">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_below">@id/detail_header</item>
+        <item name="android:src">@drawable/detail_content_bg</item>
+    </style>
+
+    <style name="DetailContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/detail_header</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+    </style>
+
+    <style name="DetailContentSectionTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="DetailContentDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginBottom">14dp</item>
+        <item name="android:background">@color/DirtyWhite</item>
+    </style>
+
+    <style name="DetailContentText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/LightGray</item>
+    </style>
+
+    <style name="DetailsInfoContainer">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
+
+    <style name="DetailsInfoLineHeading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
+        <item name="android:textColor">@color/DarkGray</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="DetailsInfoLineContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textColor">@color/LightGray</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="DetailCtaContainer">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="DetailCtaButtonFrame">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="DetailCtaButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>

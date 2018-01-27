@@ -5,251 +5,127 @@
 
     <RelativeLayout
         android:id="@+id/detail_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        style="@style/DetailContainer">
 
         <RelativeLayout
-            android:id="@+id/detail_header_container"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true">
+            android:id="@+id/detail_header"
+            style="@style/DetailHeader">
 
             <ImageView
-                android:id="@+id/detail_header_bg"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
+                android:id="@+id/detail_header_image"
                 android:src="@drawable/history_museum"
-                android:scaleType="centerCrop" />
+                style="@style/DetailHeaderImage" />
 
             <ImageView
-                android:id="@+id/detail_header_gradient"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:src="@drawable/detail_header_bg" />
+                android:id="@+id/detail_header_overlay"
+                style="@style/DetailHeaderOverlay" />
 
             <ImageButton
                 android:id="@+id/detail_back_btn"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="25dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:src="@drawable/ic_chevron_left"
-                android:scaleType="centerInside"
-                android:background="?attr/selectableItemBackground"
-                android:tint="@color/White" />
+                style="@style/DetailBackButton" />
 
             <TextView
                 android:id="@+id/detail_city"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_above="@id/detail_title"
-                android:layout_alignParentLeft="true"
-                android:fontFamily="@font/source_sans_pro"
                 android:text="@string/city_name"
-                android:textSize="14sp"
-                android:textColor="@color/LessTransparentWhite"
-                android:textAllCaps="true"
-                android:maxLines="1" />
+                style="@style/DetailCityName" />
 
             <TextView
                 android:id="@+id/detail_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="24dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:fontFamily="@font/open_sans_extrabold"
                 android:text="National Museum of Romanian History"
-                android:textSize="26sp"
-                android:textColor="@color/White"
-                android:lineSpacingMultiplier="1"
-                android:lineSpacingExtra="-4dp"
-                android:maxLines="3" />
+                style="@style/DetailTitle" />
 
         </RelativeLayout>
 
         <ImageView
             android:id="@+id/detail_content_bg"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_below="@id/detail_header_container"
-            android:src="@drawable/detail_content_bg" />
+            style="@style/DetailContentBackground" />
 
         <RelativeLayout
             android:id="@+id/detail_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/detail_header_container"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="24dp"
-            android:paddingBottom="24dp">
+            style="@style/DetailContent">
 
             <TextView
                 android:id="@+id/about_section_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:fontFamily="@font/source_sans_pro_semibold"
                 android:text="About"
-                android:textSize="20sp"
-                android:textColor="@color/Black"
-                android:textAllCaps="false"
-                android:maxLines="1" />
+                style="@style/DetailContentSectionTitle" />
 
             <View
                 android:id="@+id/about_section_divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginBottom="14dp"
                 android:layout_below="@id/about_section_title"
-                android:background="#dddddd"/>
+                style="@style/DetailContentDivider" />
 
             <TextView
                 android:id="@+id/about_section_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_below="@id/about_section_divider"
                 android:text="The National Museum of Romanian History is a museum located on Calea Victoriei in Bucharest, Romania, which contains Romanian historical artifacts from prehistoric times up to modern times."
-                android:textSize="15sp"
-                android:textColor="#888888"/>
+                style="@style/DetailContentText" />
 
             <View
                 android:id="@+id/below_about_section_divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginBottom="14dp"
                 android:layout_below="@id/about_section_text"
-                android:background="#dddddd"/>
+                style="@style/DetailContentDivider" />
 
             <TextView
                 android:id="@+id/details_section_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_below="@id/below_about_section_divider"
-                android:fontFamily="@font/source_sans_pro_semibold"
                 android:text="Details"
-                android:textSize="20sp"
-                android:textColor="@color/Black"
-                android:textAllCaps="false"
-                android:maxLines="1" />
+                style="@style/DetailContentSectionTitle" />
 
             <View
                 android:id="@+id/details_section_divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginBottom="14dp"
                 android:layout_below="@id/details_section_title"
-                android:background="#dddddd"/>
+                style="@style/DetailContentDivider" />
 
             <LinearLayout
                 android:id="@+id/details_address_container"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:layout_below="@id/details_section_divider">
+                android:layout_below="@id/details_section_divider"
+                style="@style/DetailsInfoContainer">
 
                 <TextView
                     android:id="@+id/details_address_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
-                    android:fontFamily="@font/source_sans_pro_semibold"
                     android:text="Address:"
-                    android:textColor="@color/DarkGray"
-                    android:textSize="15sp" />
+                    style="@style/DetailsInfoLineHeading" />
 
                 <TextView
                     android:id="@+id/details_address_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/source_sans_pro"
                     android:text="Calea Victoriei 12, Bucharest"
-                    android:textColor="#888888"
-                    android:textSize="15sp"
-                    android:gravity="right" />
+                    style="@style/DetailsInfoLineContent" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/details_hours_container"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:layout_below="@id/details_address_container">
+                android:layout_below="@id/details_address_container"
+                style="@style/DetailsInfoContainer">
 
                 <TextView
                     android:id="@+id/details_hours_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
-                    android:fontFamily="@font/source_sans_pro_semibold"
                     android:text="Hours:"
-                    android:textColor="@color/DarkGray"
-                    android:textSize="15sp" />
+                    style="@style/DetailsInfoLineHeading" />
 
                 <TextView
                     android:id="@+id/details_hours_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/source_sans_pro"
                     android:text="09:00 - 17:00"
-                    android:textColor="#888888"
-                    android:textSize="15sp"
-                    android:gravity="right"/>
+                    style="@style/DetailsInfoLineContent" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/details_phone_container"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:layout_below="@id/details_hours_container">
+                android:layout_below="@id/details_hours_container"
+                style="@style/DetailsInfoContainer">
 
                 <TextView
                     android:id="@+id/details_phone_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/details_section_divider"
-                    android:fontFamily="@font/source_sans_pro_semibold"
                     android:text="Phone:"
-                    android:textColor="@color/DarkGray"
-                    android:textSize="15sp" />
+                    style="@style/DetailsInfoLineHeading" />
 
                 <TextView
                     android:id="@+id/details_phone_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/source_sans_pro"
                     android:text="+40 21 315 8207"
-                    android:textColor="#888888"
-                    android:textSize="15sp"
-                    android:gravity="right" />
+                    style="@style/DetailsInfoLineContent" />
 
             </LinearLayout>
 
@@ -257,44 +133,30 @@
 
         <LinearLayout
             android:id="@+id/detail_cta_container"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_below="@id/detail_content">
+            android:layout_below="@id/detail_content"
+            style="@style/DetailCtaContainer">
 
             <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                style="@style/DetailCtaButtonFrame"
                 android:layout_weight="1"
                 android:background="@color/Black">
 
                 <Button
                     android:id="@+id/detail_phone_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:fontFamily="@font/source_sans_pro_semibold"
                     android:text="Call"
-                    android:textColor="@color/White"
-                    android:textSize="16sp"/>
+                    style="@style/DetailCtaButton" />
 
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                style="@style/DetailCtaButtonFrame"
                 android:layout_weight="2"
                 android:background="@color/Yellow">
 
                 <Button
                     android:id="@+id/detail_directions_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="?attr/selectableItemBackground"
-                    android:fontFamily="@font/source_sans_pro_semibold"
                     android:text="Get Directions"
-                    android:textColor="@color/White"
-                    android:textSize="16sp"/>
+                    style="@style/DetailCtaButton" />
 
             </FrameLayout>
 
