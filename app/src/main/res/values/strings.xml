@@ -93,5 +93,6 @@
     <string name="placeholder_description">The National Museum of Romanian History is a museum located on Calea Victoriei in Bucharest, Romania, which contains Romanian historical artifacts from prehistoric times up to modern times.</string>
     <string name="placeholder_hours">09:00 &#8211; 17:00</string>
     <string name="placeholder_phone">+40 21 315 8207</string>
+    <string name="placeholder_category_title">Category</string>
 
 </resources>

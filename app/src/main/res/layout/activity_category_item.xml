@@ -13,12 +13,12 @@
 
     <TextView
         android:id="@+id/cat_item_address"
-        tools:text="Calea Victoriei 12, Bucharest"
+        tools:text="@string/placeholder_address"
         style="@style/CategoryItemAddress" />
 
     <TextView
         android:id="@+id/cat_item_title"
-        tools:text="National Museum of Romanian History"
+        tools:text="@string/placeholder_name"
         style="@style/CategoryItemTitle" />
 
     <ImageView
