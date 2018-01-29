@@ -1,6 +1,8 @@
 package com.danieldogeanu.android.tourguide;
 
-public class Landmark {
+import java.io.Serializable;
+
+public class Landmark implements Serializable {
 
     private String mLandmark;
     private String mAddress;
