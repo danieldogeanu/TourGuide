@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
@@ -25,8 +26,27 @@ public class DetailActivity extends AppCompatActivity {
         // Get Landmark Object
         Landmark thisLandmark = (Landmark) getIntent().getSerializableExtra("serialize_data");
 
+        // Set City Name
+        fillText(R.id.detail_city, getString(R.string.city_name));
+
         // Set Detail Title
-        TextView detailTitle = (TextView) findViewById(R.id.detail_title);
-        detailTitle.setText(thisLandmark.getLandmarkName());
+        fillText(R.id.detail_title, thisLandmark.getLandmarkName());
+
+        // Set Header Image
+        fillImage(R.id.detail_header_image, thisLandmark.getImageId());
+
+        // Set Address
+        fillText(R.id.details_address_content, thisLandmark.getAddress());
     }
+
+    private void fillText(int id, String text) {
+        TextView thisTextView = (TextView) findViewById(id);
+        thisTextView.setText(text);
+    }
+
+    private void fillImage(int id, int image) {
+        ImageView thisImageView = (ImageView) findViewById(id);
+        thisImageView.setImageResource(image);
+    }
+
 }
