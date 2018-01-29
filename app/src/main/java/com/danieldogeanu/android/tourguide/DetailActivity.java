@@ -35,8 +35,17 @@ public class DetailActivity extends AppCompatActivity {
         // Set Header Image
         fillImage(R.id.detail_header_image, thisLandmark.getImageId());
 
+        // Set About Section Text
+        fillText(R.id.about_section_text, thisLandmark.getDescription());
+
         // Set Address
         fillText(R.id.details_address_content, thisLandmark.getAddress());
+
+        // Set Hours
+        fillText(R.id.details_hours_content, thisLandmark.getHours());
+
+        // Set Phone
+        fillText(R.id.details_phone_content, thisLandmark.getPhone());
     }
 
     private void fillText(int id, String text) {
