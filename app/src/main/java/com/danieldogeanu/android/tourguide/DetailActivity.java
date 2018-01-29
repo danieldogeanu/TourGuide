@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
     @Override
@@ -20,5 +21,12 @@ public class DetailActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        // Get Landmark Object
+        Landmark thisLandmark = (Landmark) getIntent().getSerializableExtra("serialize_data");
+
+        // Set Detail Title
+        TextView detailTitle = (TextView) findViewById(R.id.detail_title);
+        detailTitle.setText(thisLandmark.getLandmarkName());
     }
 }

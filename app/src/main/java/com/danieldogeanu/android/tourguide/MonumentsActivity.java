@@ -32,7 +32,7 @@ public class MonumentsActivity extends AppCompatActivity {
             }
         });
 
-        ArrayList<Landmark> monuments = new ArrayList<>();
+        final ArrayList<Landmark> monuments = new ArrayList<>();
 
         monuments.add(new Landmark("Herastrau Park", "Bucharest", R.drawable.herastrau_park));
         monuments.add(new Landmark("Palace of the Parliament", "Strada Izvor 2-4, Bucharest", R.drawable.casa_poporului));
@@ -48,7 +48,12 @@ public class MonumentsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                // Get Landmark object at current position
+                Landmark monument = monuments.get(position);
+
+                // Start intent and send Landmark object to DetailActivity
                 Intent detailActivity = new Intent(MonumentsActivity.this, DetailActivity.class);
+                detailActivity.putExtra("serialize_data", monument);
                 startActivity(detailActivity);
 
             }
