@@ -18,74 +18,140 @@
 
     <!--MUSEUMS-->
     <string-array name="museums_names">
+        <item>National Art Museum of Romania</item>
+        <item>Dimitrie Gusti National Village Museum</item>
+        <item>Grigore Antipa National Museum of Natural History</item>
+        <item>Romanian Peasant Museum</item>
         <item>National Museum of Romanian History</item>
+        <item>Curtea Veche</item>
+        <item>National Museum of Contemporary Art</item>
+        <item>Jewish Museum</item>
         <item>National Military Museum</item>
         <item>Museum of the Romanian Railways</item>
     </string-array>
     <string-array name="museums_addresses">
+        <item>Calea Victoriei 49&#8211;53, Bucharest</item>
+        <item>Șoseaua Pavel Dimitrievici Kiseleff 28&#8211;30, Sector 1, Bucharest</item>
+        <item>Șoseaua Pavel Dimitrievici Kiseleff 1, Bucharest</item>
+        <item>Șoseaua Pavel Dimitrievici Kiseleff 3, Bucharest</item>
         <item>Calea Victoriei 12, Bucharest</item>
+        <item>Strada Franceză 25, Bucharest</item>
+        <item>Strada Izvor 2&#8211;4, Bucharest</item>
+        <item>Intrarea Mămulari 3, Bucharest</item>
         <item>Strada Mircea Vulcănescu 125&#8211;127, Bucharest</item>
         <item>Strada Gării de Nord, Bucharest</item>
     </string-array>
     <string-array name="museums_descriptions">
-
+        <item>The National Museum of Art of Romania (Romanian: Muzeul Național de Artă al României) is located in the Royal Palace in Revolution Square, central Bucharest. It features collections of medieval and modern Romanian art, as well as the international collection assembled by the Romanian royal family.</item>
+        <item>The Village Museum is an open-air ethnographic museum located in the Herăstrău Park, showcasing traditional Romanian village life. The museum extends to over 100,000 meters square, and contains 272 authentic peasant farms and houses from all over Romania.</item>
+        <item>The Grigore Antipa National Museum of Natural History is a Natural History museum, located in Bucharest, Romania. It was originally established as the National Museum of Natural History on 3 November 1834.</item>
+        <item>The National Museum of the Romanian Peasant is a museum in Bucharest, Romania, with a collection of textiles, icons, ceramics, and other artifacts of Romanian peasant life.</item>
+        <item>The National Museum of Romanian History is a museum located on Calea Victoriei in Bucharest, Romania, which contains Romanian historical artifacts from prehistoric times up to modern times.</item>
+        <item>Curtea Veche was built as a palace or residence during the rule of Vlad III Dracula in 1459. Archaeological excavations started in 1953, and now the site is operated by the Muzeul Municipiului Bucuresti in the historic centre of Bucharest, Romania.</item>
+        <item>The National Museum of Contemporary Art is a contemporary art museum in Bucharest, Romania. The museum is located in a new glass wing of the Palace of the Parliament, one of the largest administrative buildings in the world.</item>
+        <item>The Jewish Museum in Bucharest, Romania is located in the former Templul Unirea Sfântă synagogue, which survived both World War II and Nicolae Ceauşescu unscathed.</item>
+        <item>The National Military Museum, was established in 1923 by King Ferdinand. It has been at its present site since 1988, in a building finished in 1898.</item>
+        <item>The Museum of the Romanian Railways in Bucharest was inaugurated on June 10, 1939, under the name of \"Muzeul Ceferiștilor\", during the \"Ceferiadei\" celebrations that celebrated the 70th anniversary of the opening of the Bucharest-Filaret-Giurgiu railway. The original location was in the park and arenas of the Giulesti Stadium.</item>
     </string-array>
     <string-array name="museums_hours">
-
+        <item>Monday &#8211; Tuesday: Closed\nWednesday &#8211; Sunday: 10:00&#8211;18:00</item>
+        <item>Monday &#8211; Thursday: 08:00&#8211;16:30\nFriday: 08:00&#8211;14:00\nSaturday &#8211; Sunday: Closed</item>
+        <item>Monday: Closed\nTuesday &#8211; Friday: 10:00&#8211;18:00\nSaturday &#8211; Sunday: 10:00&#8211;19:00</item>
+        <item>Monday: Closed\nTuesday &#8211; Sunday: 09:00&#8211;17:00</item>
+        <item>Monday &#8211; Tuesday: Closed\nWednesday &#8211; Sunday: 09:00&#8211;17:00</item>
+        <item>Everyday: 10:00&#8211;18:00</item>
+        <item>Monday &#8211; Tuesday: Closed\nWednesday &#8211; Sunday: 10:00&#8211;18:00</item>
+        <item>Monday &#8211; Thursday: 10:00&#8211;14:00\nFriday: 10:00&#8211;13:00\nSaturday: Closed\nSunday: 10:00&#8211;13:00</item>
+        <item>Monday &#8211; Tuesday: Closed\nWednesday &#8211; Sunday: 09:00&#8211;17:00</item>
+        <item>Monday &#8211; Tuesday: Closed\nWednesday &#8211; Sunday: 10:00&#8211;16:00</item>
     </string-array>
     <string-array name="museums_phones">
-
+        <item>21 313 3030</item>
+        <item>21 317 9103</item>
+        <item>21 312 8826</item>
+        <item>21 317 9661</item>
+        <item>21 315 8207</item>
+        <item>21 314 0375</item>
+        <item>21 318 9137</item>
+        <item>21 311 0870</item>
+        <item>21 319 5904</item>
+        <item>31 620 3902</item>
     </string-array>
 
     <!--PARKS-->
     <string-array name="parks_names">
         <item>Herastrau Park</item>
+        <item></item>
     </string-array>
     <string-array name="parks_addresses">
         <item>Bucharest</item>
+        <item></item>
     </string-array>
     <string-array name="parks_descriptions">
-
+        <item></item>
+        <item></item>
     </string-array>
     <string-array name="parks_hours">
-
+        <item></item>
+        <item></item>
     </string-array>
     <string-array name="parks_phones">
-
+        <item></item>
+        <item></item>
     </string-array>
 
     <!--PALACES-->
     <string-array name="palaces_names">
         <item>Palace of the Parliament</item>
+        <item>Cotroceni Palace</item>
+        <item>Crețulescu Palace</item>
+        <item>Mogoșoaia Palace</item>
+        <item>Cantacuzino Palace</item>
     </string-array>
     <string-array name="palaces_addresses">
         <item>Strada Izvor 2&#8211;4, Bucharest</item>
+        <item>Bulevardul Geniului 1, Bucharest</item>
+        <item>Strada Știrbei Vodă 39, Bucharest</item>
+        <item>Strada Valea Parcului 1, Mogoșoaia</item>
+        <item>Calea Victoriei 141, Bucharest</item>
     </string-array>
     <string-array name="palaces_descriptions">
-
+        <item>The Palace of the Parliament (Romanian: Palatul Parlamentului) is the seat of the Parliament of Romania. Located on Dealul Arsenalului in central Bucharest (Sector 5), it is the largest administrative building in the world with a height of 84 metres (276 ft), an area of 365,000 square metres (3,930,000 sq ft) and a volume of 2,550,000 cubic metres (90,000,000 cu ft). The Palace of the Parliament is also the heaviest building in the world, weighing in at around 4,098,500,000 kilograms (9.0356×109 lb).</item>
+        <item>Cotroceni Palace is the official residence of the President of Romania. Located at Bulevardul Geniului 1, in Bucharest, Romania, the palace also houses the National Cotroceni Museum.</item>
+        <item>Crețulescu Palace is a historic building near the Cișmigiu Gardens on the Știrbei Vodă street. It has been built for the Crețulescu family at the beginning of the 20th century, by Romanian architect Petre Antonescu.</item>
+        <item>Mogoșoaia Palace is situated about 10 kilometres from Bucharest, Romania. It was built between 1698&#8211;1702 by Constantin Brâncoveanu in what is called the Romanian Renaissance style or Brâncovenesc style.</item>
+        <item>Cantacuzino Palace was built by architect Ion D. Berindey in French Baroque/Art Nouveau style. Today it houses the George Enescu museum.</item>
     </string-array>
     <string-array name="palaces_hours">
-
+        <item>March &#8211; October (Monday &#8211; Sunday): 09:00&#8211;17:00\nNovember &#8211; February (Monday &#8211; Sunday): 10:00&#8211;16:00</item>
+        <item>Monday: Closed\nTuesday &#8211; Sunday: 09:30&#8211;17:30</item>
+        <item> </item>
+        <item>Monday: Closed\nTuesday &#8211; Sunday: 10:00&#8211;18:00</item>
+        <item>Monday: Closed\nTuesday &#8211; Sunday: 10:00&#8211;17:00</item>
     </string-array>
     <string-array name="palaces_phones">
-
+        <item>733 558 102</item>
+        <item>21 317 3106</item>
+        <item> </item>
+        <item>21 350 6619</item>
+        <item>747 290 104</item>
     </string-array>
 
     <!--MONUMENTS-->
     <string-array name="monuments_names">
-
+        <item></item>
     </string-array>
     <string-array name="monuments_addresses">
-
+        <item></item>
     </string-array>
     <string-array name="monuments_descriptions">
-
+        <item></item>
     </string-array>
     <string-array name="monuments_hours">
-
+        <item></item>
     </string-array>
     <string-array name="monuments_phones">
-
+        <item></item>
     </string-array>
 
     <string name="placeholder_name">National Museum of Romanian History</string>
