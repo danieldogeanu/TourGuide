@@ -28,7 +28,7 @@
 
     <style name="MainActicityBackgroundImage">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">336dp</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:scaleType">centerCrop</item>

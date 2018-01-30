@@ -6,7 +6,7 @@
 
     <ImageView
         android:id="@+id/main_bg_image"
-        android:src="@drawable/ateneul_roman"
+        android:src="@drawable/main_activity_bg"
         style="@style/MainActicityBackgroundImage" />
 
     <RelativeLayout
