@@ -51,7 +51,7 @@ public class PalacesActivity extends AppCompatActivity {
                     palacesAdresses[i],
                     palacesHours[i],
                     addPrefix(palacesPhones[i]),
-                    R.drawable.history_museum));
+                    R.drawable.placeholder_image));
         }
 
         // Set Custom List View Adapter

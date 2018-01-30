@@ -51,7 +51,7 @@ public class MonumentsActivity extends AppCompatActivity {
                     monumentsAdresses[i],
                     monumentsHours[i],
                     addPrefix(monumentsPhones[i]),
-                    R.drawable.history_museum));
+                    R.drawable.placeholder_image));
         }
 
         // Set Custom List View Adapter

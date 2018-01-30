@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/cat_bg_image"
         style="@style/CategoryItemBackgroundImage"
-        tools:src="@drawable/history_museum"
+        tools:src="@drawable/placeholder_image"
         android:tint="@color/MoreTransparentBlack" />
 
     <TextView

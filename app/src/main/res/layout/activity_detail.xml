@@ -13,7 +13,7 @@
 
             <ImageView
                 android:id="@+id/detail_header_image"
-                tools:src="@drawable/history_museum"
+                tools:src="@drawable/placeholder_image"
                 style="@style/DetailHeaderImage" />
 
             <ImageView
