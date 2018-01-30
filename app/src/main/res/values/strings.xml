@@ -80,24 +80,59 @@
 
     <!--PARKS-->
     <string-array name="parks_names">
-        <item>Herastrau Park</item>
-        <item></item>
+        <item>Băneasa Zoo</item>
+        <item>Herăstrău Park</item>
+        <item>Cișmigiu Gardens</item>
+        <item>Tineretului Park</item>
+        <item>Alexandru Ioan Cuza Park</item>
+        <item>Carol Park</item>
+        <item>Drumul Taberei Park</item>
+        <item>Bucharest Botanical Garden</item>
+        <item>Kiseleff Park</item>
     </string-array>
     <string-array name="parks_addresses">
-        <item>Bucharest</item>
-        <item></item>
+        <item>Strada Vadul Moldovei 4, Bucharest</item>
+        <item>Bulevardul Aviatorilor, Bucharest</item>
+        <item>Bulevardul Regina Elisabeta, Bucharest</item>
+        <item>Bulevardul Tineretului, Bucharest</item>
+        <item>Strada Liviu Rebreanu, Bucharest</item>
+        <item>Bulevardul Mărășești, Bucharest</item>
+        <item>Drumul Taberei, Bucharest</item>
+        <item>Șoseaua Cotroceni 32, Bucharest</item>
+        <item>Șoseaua Pavel Dimitrievici Kiseleff, Bucharest</item>
     </string-array>
     <string-array name="parks_descriptions">
-        <item></item>
-        <item></item>
+        <item>Zoo Băneasa is a zoo in Bucharest, Romania, located in a northern district of the city, called Băneasa.</item>
+        <item>Herăstrău Park is a large park on the northern side of Bucharest, Romania, around Lake Herăstrău, one of the lakes formed by the Colentina River.</item>
+        <item>Cișmigiu Park is a vast English&#8211;style garden with fountains, monuments and a popular boating lake where the landmark Monte Carlo restaurant stands on a central island. Elegant pre&#8211;communist buildings line nearby Regina Maria boulevard. The 19th&#8211;century Gambrinus Brewery serves local beer and traditional food, and surrounding streets have snack bars, pubs and stylish, low&#8211;key nightclubs.</item>
+        <item>The largest park in the south part of Bucharest, featuring some of the best playgrounds in the city. Divided into two parts, the main section (closest to Tineretului metro) offers a few rides for kids, trampolines and dodgems, as well as playgrounds and plenty of tree-lined avenues great for strolling.</item>
+        <item>Large park featuring a lake with 5 small islands, plus a church, playgrounds and sports facilities.</item>
+        <item>Carol Park (Romanian: Parcul Carol) is a public park in Bucharest, Romania, named after King Carol I of Romania. A French garden located in the southern-central area of Bucharest, partly on Filaret hill, originally capable of hosting various exhibitions, it suffered considerable modifications during the communist regime, including a name change to Liberty Park (Romanian: Parcul Libertății).</item>
+        <item>A beautiful park with children\'s playgrounds, alleys you can walk, an impressive suspended bridge beautifully lighting during the evening, a large fountain and green spaces.</item>
+        <item>The Bucharest Botanical Garden, now named after its founder, Dimitrie Brândză, is located in the Cotroceni neighbourhood of Bucharest, Romania. It has a surface of 17.5 hectares, and has more than 10,000 species of plants.</item>
+        <item>Green space demarcated around 1832, with sculptures and busts of notable Romanians and Roman poet Publius Ovidius Naso (Romanian: Ovidiu).</item>
     </string-array>
     <string-array name="parks_hours">
-        <item></item>
-        <item></item>
+        <item>Monday &#8211; Friday: 09:00&#8211;19:00\nSaturday &#8211; Sunday: 08:00&#8211;20:00</item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
+        <item>Everyday: 08:00&#8211;20:00</item>
+        <item>Open 24/7</item>
     </string-array>
     <string-array name="parks_phones">
-        <item></item>
-        <item></item>
+        <item>21 269 0600</item>
+        <item>744 630 000</item>
+        <item>21 224 5860</item>
+        <item>21 224 5860</item>
+        <item> </item>
+        <item> </item>
+        <item>21 410 2550</item>
+        <item>21 410 9139</item>
+        <item>21 319 3253</item>
     </string-array>
 
     <!--PALACES-->
