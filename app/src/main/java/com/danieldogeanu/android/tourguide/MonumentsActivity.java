@@ -38,7 +38,14 @@ public class MonumentsActivity extends AppCompatActivity {
         String[] monumentsDescriptions = getResources().getStringArray(R.array.monuments_descriptions);
         String[] monumentsHours = getResources().getStringArray(R.array.monuments_hours);
         String[] monumentsPhones = getResources().getStringArray(R.array.monuments_phones);
-        int[] monumentsImages = {};
+        int[] monumentsImages = {
+                R.drawable.arcul_de_triumf,
+                R.drawable.memorial_of_rebirth,
+                R.drawable.carol_i_statue,
+                R.drawable.kilometre_zero,
+                R.drawable.george_enescu_statue,
+                R.drawable.nations_heroes_memorial
+        };
 
         // Initialize ArrayList of Landmarks
         final ArrayList<Landmark> monuments = new ArrayList<>();
@@ -51,7 +58,7 @@ public class MonumentsActivity extends AppCompatActivity {
                     monumentsAdresses[i],
                     monumentsHours[i],
                     addPrefix(monumentsPhones[i]),
-                    R.drawable.placeholder_image));
+                    monumentsImages[i]));
         }
 
         // Set Custom List View Adapter
