@@ -174,19 +174,44 @@
 
     <!--MONUMENTS-->
     <string-array name="monuments_names">
-        <item></item>
+        <item>Arcul de Triumf</item>
+        <item>Memorial of Rebirth</item>
+        <item>Equestrian Statue of Carol I</item>
+        <item>Kilometre Zero</item>
+        <item>George Enescu Statue</item>
+        <item>Nation\'s Heroes Memorial</item>
     </string-array>
     <string-array name="monuments_addresses">
-        <item></item>
+        <item>Piața Arcul de Triumf, Bucharest</item>
+        <item>Piața Revoluției, Bucharest</item>
+        <item>Calea Victoriei 49&#8211;53, Bucharest</item>
+        <item>Piata Sf. Gheorghe, Bucharest</item>
+        <item>Bulevardul Mihail Kogălniceanu, Bucharest</item>
+        <item>Strada General Candiano Popescu 105, Bucharest</item>
     </string-array>
     <string-array name="monuments_descriptions">
-        <item></item>
+        <item>Arcul de Triumf is a triumphal arch located in the northern part of Bucharest, on the Kiseleff Road. The first, wooden, triumphal arch was built hurriedly, after Romania gained its independence, so that the victorious troops could march under it.</item>
+        <item>The Memorial of Rebirth is a memorial in Bucharest, Romania that commemorates the struggles and victims of the Romanian Revolution of 1989, which overthrew Communism.</item>
+        <item>The equestrian statue of Carol I is a monument in Romania, situated in the central zone of Bucharest, on Calea Victoriei. The massive statue, cast in bronze, represents Carol I of Romania, the first King of Romania, mounted on his horse.</item>
+        <item>The Kilometre Zero monument located in central Bucharest, Romania, in front of Saint George\'s Church, was created by Constantin Baraski in 1938. The distances from Bucharest to other cities in Romania are measured from this monument.</item>
+        <item>The statue of George Enescu was unveiledin Bucharest on the occasion of the official opening of this year\’s edition of the International Music Festival named after the great Romanian composer. According to a press release issued by the capital\’s city hall, the monument was donated to the municipality by sculptor Constantin Baraschi\’s family.</item>
+        <item>This impresive memorial is dedicated to the Romanian soldiers who fell in both world wars. There are also Romanians fallen from the First World War buried here.</item>
     </string-array>
     <string-array name="monuments_hours">
-        <item></item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
+        <item>Open 24/7</item>
     </string-array>
     <string-array name="monuments_phones">
-        <item></item>
+        <item>787 584 104</item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item>787 584 104</item>
     </string-array>
 
     <string name="placeholder_name">National Museum of Romanian History</string>
