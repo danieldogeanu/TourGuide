@@ -38,7 +38,13 @@ public class PalacesActivity extends AppCompatActivity {
         String[] palacesDescriptions = getResources().getStringArray(R.array.palaces_descriptions);
         String[] palacesHours = getResources().getStringArray(R.array.palaces_hours);
         String[] palacesPhones = getResources().getStringArray(R.array.palaces_phones);
-        int[] palacesImages = {};
+        int[] palacesImages = {
+                R.drawable.palace_of_parliament,
+                R.drawable.cotroceni_palace,
+                R.drawable.cretulescu_palace,
+                R.drawable.mogosoaia_palace,
+                R.drawable.cantacuzino_palace
+        };
 
         // Initialize ArrayList of Landmarks
         final ArrayList<Landmark> palaces = new ArrayList<>();
@@ -51,7 +57,7 @@ public class PalacesActivity extends AppCompatActivity {
                     palacesAdresses[i],
                     palacesHours[i],
                     addPrefix(palacesPhones[i]),
-                    R.drawable.placeholder_image));
+                    palacesImages[i]));
         }
 
         // Set Custom List View Adapter
