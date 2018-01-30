@@ -38,7 +38,18 @@ public class MuseumsActivity extends AppCompatActivity {
         String[] museumsDescriptions = getResources().getStringArray(R.array.museums_descriptions);
         String[] museumsHours = getResources().getStringArray(R.array.museums_hours);
         String[] museumsPhones = getResources().getStringArray(R.array.museums_phones);
-        int[] museumsImages = {};
+        int[] museumsImages = {
+                R.drawable.national_art_museum_of_romania,
+                R.drawable.dimitrie_gusti_national_village_museum,
+                R.drawable.grigore_antipa_national_museum_of_natural_history,
+                R.drawable.romanian_peasant_museum,
+                R.drawable.national_museum_of_romanian_history,
+                R.drawable.curtea_veche,
+                R.drawable.national_museum_of_contemporary_art,
+                R.drawable.jewish_museum,
+                R.drawable.national_military_museum,
+                R.drawable.museum_of_the_romanian_railways
+        };
 
         // Initialize ArrayList of Landmarks
         final ArrayList<Landmark> museums = new ArrayList<>();
@@ -51,7 +62,7 @@ public class MuseumsActivity extends AppCompatActivity {
                     museumsAdresses[i],
                     museumsHours[i],
                     addPrefix(museumsPhones[i]),
-                    R.drawable.placeholder_image));
+                    museumsImages[i]));
         }
 
         // Set Custom List View Adapter
