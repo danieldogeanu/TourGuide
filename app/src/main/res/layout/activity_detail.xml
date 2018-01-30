@@ -137,6 +137,7 @@
             style="@style/DetailCtaContainer">
 
             <FrameLayout
+                android:id="@+id/detail_call_btn_frame"
                 style="@style/DetailCtaButtonFrame"
                 android:layout_weight="1"
                 android:background="@color/Black">
@@ -149,6 +150,7 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/detail_directions_btn_frame"
                 style="@style/DetailCtaButtonFrame"
                 android:layout_weight="2"
                 android:background="@color/Yellow">

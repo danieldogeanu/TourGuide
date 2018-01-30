@@ -39,13 +39,26 @@ public class DetailActivity extends AppCompatActivity {
         fillText(R.id.about_section_text, thisLandmark.getDescription());
 
         // Set Address
-        fillText(R.id.details_address_content, thisLandmark.getAddress());
+        if (!thisLandmark.getAddress().isEmpty()) {
+            fillText(R.id.details_address_content, thisLandmark.getAddress());
+        } else {
+            hideView(R.id.details_address_container);
+        }
 
         // Set Hours
-        fillText(R.id.details_hours_content, thisLandmark.getHours());
+        if (!thisLandmark.getHours().isEmpty()) {
+            fillText(R.id.details_hours_content, thisLandmark.getHours());
+        } else {
+            hideView(R.id.details_hours_container);
+        }
 
         // Set Phone
-        fillText(R.id.details_phone_content, thisLandmark.getPhone());
+        if (!thisLandmark.getPhone().isEmpty()) {
+            fillText(R.id.details_phone_content, thisLandmark.getPhone());
+        } else {
+            hideView(R.id.details_phone_container);
+            hideView(R.id.detail_call_btn_frame);
+        }
     }
 
     private void fillText(int id, String text) {
@@ -56,6 +69,11 @@ public class DetailActivity extends AppCompatActivity {
     private void fillImage(int id, int image) {
         ImageView thisImageView = (ImageView) findViewById(id);
         thisImageView.setImageResource(image);
+    }
+
+    private void hideView(int id) {
+        View thisView = (View) findViewById(id);
+        thisView.setVisibility(View.GONE);
     }
 
 }
