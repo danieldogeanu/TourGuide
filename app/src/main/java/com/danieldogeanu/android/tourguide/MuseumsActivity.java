@@ -50,7 +50,7 @@ public class MuseumsActivity extends AppCompatActivity {
                     museumsDescriptions[i],
                     museumsAdresses[i],
                     museumsHours[i],
-                    "+40 " + museumsPhones[i],
+                    addPrefix(museumsPhones[i]),
                     R.drawable.history_museum));
         }
 
@@ -74,5 +74,13 @@ public class MuseumsActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private String addPrefix(String phone) {
+        if (!phone.isEmpty()) {
+            return "+40 " + phone;
+        } else {
+            return phone;
+        }
     }
 }
