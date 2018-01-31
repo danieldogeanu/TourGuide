@@ -38,7 +38,17 @@ public class ParksActivity extends AppCompatActivity {
         String[] parksDescriptions = getResources().getStringArray(R.array.parks_descriptions);
         String[] parksHours = getResources().getStringArray(R.array.parks_hours);
         String[] parksPhones = getResources().getStringArray(R.array.parks_phones);
-        int[] parksImages = {};
+        int[] parksImages = {
+                R.drawable.baneasa_zoo,
+                R.drawable.herastrau_park,
+                R.drawable.cismigiu_gardens,
+                R.drawable.tineretului_park,
+                R.drawable.alexandru_ioan_cuza_park,
+                R.drawable.carol_park,
+                R.drawable.drumul_taberei_park,
+                R.drawable.bucharest_botanical_garden,
+                R.drawable.kiseleff_park
+        };
 
         // Initialize ArrayList of Landmarks
         final ArrayList<Landmark> parks = new ArrayList<>();
@@ -51,7 +61,7 @@ public class ParksActivity extends AppCompatActivity {
                     parksAdresses[i],
                     parksHours[i],
                     addPrefix(parksPhones[i]),
-                    R.drawable.placeholder_image));
+                    parksImages[i]));
         }
 
         // Set Custom List View Adapter
