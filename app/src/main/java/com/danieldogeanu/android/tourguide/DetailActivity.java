@@ -48,10 +48,6 @@ public class DetailActivity extends AppCompatActivity {
         // Set Address
         if (!thisLandmark.getAddress().isEmpty()) {
             fillText(R.id.details_address_content, thisLandmark.getAddress());
-
-            // Attach Intent to Get Directions Button
-            String mapUri = "https://www.google.com/maps/dir//Palace+of+Parliament,+Strada+Izvor+2-4,+Bucure%C8%99ti/@44.4275035,26.0873506,15z/data=!4m16!1m6!3m5!1s0x0:0x2b1089f802abaddc!2sPalace+of+Parliament!8m2!3d44.4275035!4d26.0873506!4m8!1m0!1m5!1m1!1s0x40b1ff427bee28c1:0x2b1089f802abaddc!2m2!1d26.0873506!2d44.4275035!3e3";
-            attachClickListener(R.id.detail_directions_btn, MAPS, mapUri);
         } else {
             hideView(R.id.details_address_container);
         }
@@ -69,6 +65,18 @@ public class DetailActivity extends AppCompatActivity {
         } else {
             hideView(R.id.details_phone_container);
             hideView(R.id.detail_call_btn_frame);
+        }
+
+        // Attach Intent to Get Directions Button
+        if (!thisLandmark.getMapUri().isEmpty()) {
+            attachClickListener(R.id.detail_directions_btn, MAPS, thisLandmark.getMapUri());
+        } else {
+            hideView(R.id.detail_directions_btn_frame);
+        }
+
+        // Hide Buttons Container if No Action for Both
+        if (thisLandmark.getPhone().isEmpty() && thisLandmark.getMapUri().isEmpty()) {
+            hideView(R.id.detail_cta_container);
         }
 
     }
