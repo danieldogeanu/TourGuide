@@ -38,8 +38,14 @@ public class MonumentsActivity extends AppCompatActivity {
         String[] monumentsDescriptions = getResources().getStringArray(R.array.monuments_descriptions);
         String[] monumentsHours = getResources().getStringArray(R.array.monuments_hours);
         String[] monumentsPhones = getResources().getStringArray(R.array.monuments_phones);
-//        String[] monumentsMapUris = {}; // TODO: Add String Array of Map URIs for Monuments
-        String mapUri = "https://www.google.com/maps/dir//Palace+of+Parliament,+Strada+Izvor+2-4,+Bucure%C8%99ti/@44.4275035,26.0873506,15z/data=!4m16!1m6!3m5!1s0x0:0x2b1089f802abaddc!2sPalace+of+Parliament!8m2!3d44.4275035!4d26.0873506!4m8!1m0!1m5!1m1!1s0x40b1ff427bee28c1:0x2b1089f802abaddc!2m2!1d26.0873506!2d44.4275035!3e3";
+        String[] monumentsMapUris = {
+                "https://www.google.com/maps/dir//The+Arch+Of+Triumph,+Pia%C8%9Ba+Arcul+de+Triumf,+Bucure%C8%99ti/@44.4671777,26.078116,15z/data=!4m16!1m6!3m5!1s0x0:0x57ae7c6e837bc61b!2sThe+Arch+Of+Triumph!8m2!3d44.4671777!4d26.078116!4m8!1m0!1m5!1m1!1s0x40b202172654ca11:0x57ae7c6e837bc61b!2m2!1d26.078116!2d44.4671777!3e3",
+                "https://www.google.com/maps/dir//Rebirth+Memorial,+Pia%C8%9Ba+Revolu%C8%9Biei,+Bucure%C8%99ti+030167/@44.4388942,26.097453,15z/data=!4m16!1m6!3m5!1s0x0:0xd2ec9ba0c7456177!2sRebirth+Memorial!8m2!3d44.4388942!4d26.097453!4m8!1m0!1m5!1m1!1s0x40b1ff45dcb30619:0xd2ec9ba0c7456177!2m2!1d26.097453!2d44.4388942!3e3",
+                "https://www.google.com/maps/dir//Equestrian+Statue+of+Carol+I,+Bucure%C8%99ti+030167/@44.4396476,26.0970161,15z/data=!4m16!1m6!3m5!1s0x0:0x1ff3885d06d59e62!2sEquestrian+Statue+of+Carol+I!8m2!3d44.4396476!4d26.0970161!4m8!1m0!1m5!1m1!1s0x40b1ff45931aafa5:0x1ff3885d06d59e62!2m2!1d26.0970161!2d44.4396476!3e3",
+                "https://www.google.com/maps/dir//Kilometre+Zero,+Bulevardul+Ion+C.+Br%C4%83tianu,+Bucure%C8%99ti+030167/@44.4327025,26.1040494,15z/data=!4m17!1m7!3m6!1s0x0:0x4ad53314f3dcaebf!2sKilometre+Zero,+Bulevardul+Ion+C.+Br%C4%83tianu,+Bucure%C8%99ti+030167!3b1!8m2!3d44.4327025!4d26.1040494!4m8!1m0!1m5!1m1!1s0x40b1ff3edff6735f:0x4ad53314f3dcaebf!2m2!1d26.1040494!2d44.4327025!3e3",
+                "https://www.google.com/maps/dir//Statue+of+George+Enescu,+Bulevardul+Mihail+Kog%C4%83lniceanu,+Bucure%C8%99ti/@44.4347229,26.0793548,15z/data=!4m16!1m6!3m5!1s0x0:0x93c7f0ac3cfa3bd7!2sStatue+of+George+Enescu!8m2!3d44.4347229!4d26.0793548!4m8!1m0!1m5!1m1!1s0x40b1ff6756b5300d:0x93c7f0ac3cfa3bd7!2m2!1d26.0793548!2d44.4347229!3e3",
+                "https://www.google.com/maps/dir//Nation's+Heroes+Memorial,+Strada+General+Candiano+Popescu+105,+Bucure%C8%99ti/@44.41127,26.0968789,15z/data=!4m16!1m6!3m5!1s0x0:0x3e7635bc09da2!2sNation's+Heroes+Memorial!8m2!3d44.41127!4d26.0968789!4m8!1m0!1m5!1m1!1s0x40b1ff07f2ee63ad:0x3e7635bc09da2!2m2!1d26.0968789!2d44.41127!3e3",
+        };
         int[] monumentsImages = {
                 R.drawable.arcul_de_triumf,
                 R.drawable.memorial_of_rebirth,
@@ -60,8 +66,7 @@ public class MonumentsActivity extends AppCompatActivity {
                     monumentsAdresses[i],
                     monumentsHours[i],
                     addPrefix(monumentsPhones[i]),
-//                    monumentsMapUris[i],
-                    mapUri,
+                    monumentsMapUris[i],
                     monumentsImages[i]));
         }
 
