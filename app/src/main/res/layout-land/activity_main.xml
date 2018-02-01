@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RootYellow"
+    tools:context="com.danieldogeanu.android.tourguide.MainActivity">
+
+    <ImageView
+        android:id="@+id/main_bg_image"
+        android:src="@drawable/main_activity_bg"
+        style="@style/MainActicityBackgroundImage" />
+
+    <RelativeLayout
+        android:id="@+id/screen_container"
+        style="@style/MainScreenContainer">
+
+        <LinearLayout
+            android:id="@+id/city_title"
+            style="@style/MainTitleLandscape">
+
+            <TextView
+                android:text="@string/city_name"
+                style="@style/MainTitleCityName" />
+
+            <TextView
+                android:text="@string/app_name"
+                style="@style/MainTitleSubtitle" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btns_container"
+            style="@style/FancyButtonsContainerLandscape">
+
+            <LinearLayout
+                android:id="@+id/museums_btn"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                style="@style/FancyButton">
+
+                <ImageView
+                    android:src="@drawable/ic_museums"
+                    style="@style/FancyButtonImage" />
+
+                <TextView
+                    android:text="@string/museums_title"
+                    style="@style/FancyButtonText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/parks_btn"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/museums_btn"
+                style="@style/FancyButton">
+
+                <ImageView
+                    android:src="@drawable/ic_parks"
+                    style="@style/FancyButtonImage" />
+
+                <TextView
+                    android:text="@string/parks_title"
+                    style="@style/FancyButtonText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/palaces_btn"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/parks_btn"
+                style="@style/FancyButton">
+
+                <ImageView
+                    android:src="@drawable/ic_palaces"
+                    style="@style/FancyButtonImage" />
+
+                <TextView
+                    android:text="@string/palaces_title"
+                    style="@style/FancyButtonText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/monuments_btn"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/palaces_btn"
+                style="@style/FancyButton">
+
+                <ImageView
+                    android:src="@drawable/ic_monuments"
+                    style="@style/FancyButtonImage" />
+
+                <TextView
+                    android:text="@string/monuments_title"
+                    style="@style/FancyButtonText" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/museums_btn"
+                style="@style/VerticalDivider" />
+
+            <View
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/parks_btn"
+                style="@style/VerticalDivider" />
+
+            <View
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/palaces_btn"
+                style="@style/VerticalDivider" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
