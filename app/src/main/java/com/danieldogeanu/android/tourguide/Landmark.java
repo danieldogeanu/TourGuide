@@ -9,14 +9,16 @@ public class Landmark implements Serializable {
     private String mAddress;
     private String mHours;
     private String mPhone;
+    private String mMapUri;
     private int mImageResourceId;
 
-    public Landmark(String landmark, String description, String address, String hours, String phone, int image) {
+    public Landmark(String landmark, String description, String address, String hours, String phone, String mapUri, int image) {
         mLandmark = landmark;
         mDescription = description;
         mAddress = address;
         mHours = hours;
         mPhone = phone;
+        mMapUri = mapUri;
         mImageResourceId = image;
     }
 
@@ -40,6 +42,10 @@ public class Landmark implements Serializable {
         return mPhone;
     }
 
+    public String getMapUri() {
+        return mMapUri;
+    }
+
     public int getImageId() {
         return mImageResourceId;
     }
@@ -52,6 +58,7 @@ public class Landmark implements Serializable {
                 "mAddress='" + mAddress + "', " +
                 "mHours='" + mHours + "', " +
                 "mPhone='" + mPhone + "', " +
+                "mMapUri='" + mMapUri + "', " +
                 "mImageResourceId='" + mImageResourceId + "' }";
     }
 }

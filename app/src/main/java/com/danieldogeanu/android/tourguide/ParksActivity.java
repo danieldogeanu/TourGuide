@@ -38,6 +38,8 @@ public class ParksActivity extends AppCompatActivity {
         String[] parksDescriptions = getResources().getStringArray(R.array.parks_descriptions);
         String[] parksHours = getResources().getStringArray(R.array.parks_hours);
         String[] parksPhones = getResources().getStringArray(R.array.parks_phones);
+//        String[] parksMapUris = {}; // TODO: Add String Array of Map URIs for Parks
+        String mapUri = "https://www.google.com/maps/dir//Palace+of+Parliament,+Strada+Izvor+2-4,+Bucure%C8%99ti/@44.4275035,26.0873506,15z/data=!4m16!1m6!3m5!1s0x0:0x2b1089f802abaddc!2sPalace+of+Parliament!8m2!3d44.4275035!4d26.0873506!4m8!1m0!1m5!1m1!1s0x40b1ff427bee28c1:0x2b1089f802abaddc!2m2!1d26.0873506!2d44.4275035!3e3";
         int[] parksImages = {
                 R.drawable.baneasa_zoo,
                 R.drawable.herastrau_park,
@@ -61,6 +63,8 @@ public class ParksActivity extends AppCompatActivity {
                     parksAdresses[i],
                     parksHours[i],
                     addPrefix(parksPhones[i]),
+//                    parksMapUris[i],
+                    mapUri,
                     parksImages[i]));
         }
 

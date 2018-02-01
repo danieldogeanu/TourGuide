@@ -38,6 +38,8 @@ public class MonumentsActivity extends AppCompatActivity {
         String[] monumentsDescriptions = getResources().getStringArray(R.array.monuments_descriptions);
         String[] monumentsHours = getResources().getStringArray(R.array.monuments_hours);
         String[] monumentsPhones = getResources().getStringArray(R.array.monuments_phones);
+//        String[] monumentsMapUris = {}; // TODO: Add String Array of Map URIs for Monuments
+        String mapUri = "https://www.google.com/maps/dir//Palace+of+Parliament,+Strada+Izvor+2-4,+Bucure%C8%99ti/@44.4275035,26.0873506,15z/data=!4m16!1m6!3m5!1s0x0:0x2b1089f802abaddc!2sPalace+of+Parliament!8m2!3d44.4275035!4d26.0873506!4m8!1m0!1m5!1m1!1s0x40b1ff427bee28c1:0x2b1089f802abaddc!2m2!1d26.0873506!2d44.4275035!3e3";
         int[] monumentsImages = {
                 R.drawable.arcul_de_triumf,
                 R.drawable.memorial_of_rebirth,
@@ -58,6 +60,8 @@ public class MonumentsActivity extends AppCompatActivity {
                     monumentsAdresses[i],
                     monumentsHours[i],
                     addPrefix(monumentsPhones[i]),
+//                    monumentsMapUris[i],
+                    mapUri,
                     monumentsImages[i]));
         }
 
