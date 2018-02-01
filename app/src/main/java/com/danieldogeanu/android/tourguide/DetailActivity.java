@@ -1,9 +1,12 @@
 package com.danieldogeanu.android.tourguide;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -59,9 +62,10 @@ public class DetailActivity extends AppCompatActivity {
             hideView(R.id.details_hours_container);
         }
 
-        // Set Phone
+        // Set Phone & Attach Intent to Dial the Number
         if (!thisLandmark.getPhone().isEmpty()) {
             fillText(R.id.details_phone_content, thisLandmark.getPhone());
+            attachClickListener(R.id.detail_call_btn, CALL, thisLandmark.getPhone());
         } else {
             hideView(R.id.details_phone_container);
             hideView(R.id.detail_call_btn_frame);
@@ -101,8 +105,13 @@ public class DetailActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (action == MAPS) {
-                    launchMaps(data);
+                switch (action) {
+                    case MAPS:
+                        launchMaps(data);
+                        break;
+                    case CALL:
+                        launchCall(data);
+                        break;
                 }
             }
         });
@@ -114,6 +123,16 @@ public class DetailActivity extends AppCompatActivity {
         mapIntent.setPackage("com.google.android.apps.maps");
         if (mapIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(mapIntent);
+        }
+    }
+
+    private void launchCall(String phone) {
+        Uri phoneNumber = Uri.parse("tel:" + phone);
+        Intent dialIntent = new Intent(Intent.ACTION_DIAL);
+        dialIntent.setData(phoneNumber);
+        if ((dialIntent.resolveActivity(getPackageManager()) != null) &&
+                        (ActivityCompat.checkSelfPermission(DetailActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED)) {
+            startActivity(dialIntent);
         }
     }
 
