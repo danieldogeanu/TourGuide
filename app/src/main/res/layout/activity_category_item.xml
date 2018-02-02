@@ -9,7 +9,7 @@
         android:id="@+id/cat_bg_image"
         style="@style/CategoryItemBackgroundImage"
         tools:src="@drawable/placeholder_image"
-        android:tint="@color/MoreTransparentBlack" />
+        android:tint="@color/TransparentBlack" />
 
     <TextView
         android:id="@+id/cat_item_address"

@@ -11,6 +11,7 @@
     <color name="TransparentWhite">#c3fafafa</color>
     <color name="LessTransparentWhite">#dcffffff</color>
     <color name="Black">#000000</color>
+    <color name="TransparentBlack">#6e000000</color>
     <color name="MoreTransparentBlack">#55000000</color>
     <color name="LessTransparentBlack">#e6000000</color>
     <color name="DarkGray">#333333</color>
