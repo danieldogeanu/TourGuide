@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * Class that initializes the Monuments Category screen.
+ */
 public class MonumentsActivity extends AppCompatActivity {
 
     @Override
@@ -32,12 +35,14 @@ public class MonumentsActivity extends AppCompatActivity {
             }
         });
 
-        // Get String Array Resources
+        // Get String Array Resources from the Strings File
         String[] monumentsNames = getResources().getStringArray(R.array.monuments_names);
         String[] monumentsAdresses = getResources().getStringArray(R.array.monuments_addresses);
         String[] monumentsDescriptions = getResources().getStringArray(R.array.monuments_descriptions);
         String[] monumentsHours = getResources().getStringArray(R.array.monuments_hours);
         String[] monumentsPhones = getResources().getStringArray(R.array.monuments_phones);
+
+        // Add Google Maps URIs
         String[] monumentsMapUris = {
                 "https://www.google.com/maps/dir//The+Arch+Of+Triumph,+Pia%C8%9Ba+Arcul+de+Triumf,+Bucure%C8%99ti/@44.4671777,26.078116,15z/data=!4m16!1m6!3m5!1s0x0:0x57ae7c6e837bc61b!2sThe+Arch+Of+Triumph!8m2!3d44.4671777!4d26.078116!4m8!1m0!1m5!1m1!1s0x40b202172654ca11:0x57ae7c6e837bc61b!2m2!1d26.078116!2d44.4671777!3e3",
                 "https://www.google.com/maps/dir//Rebirth+Memorial,+Pia%C8%9Ba+Revolu%C8%9Biei,+Bucure%C8%99ti+030167/@44.4388942,26.097453,15z/data=!4m16!1m6!3m5!1s0x0:0xd2ec9ba0c7456177!2sRebirth+Memorial!8m2!3d44.4388942!4d26.097453!4m8!1m0!1m5!1m1!1s0x40b1ff45dcb30619:0xd2ec9ba0c7456177!2m2!1d26.097453!2d44.4388942!3e3",
@@ -46,6 +51,8 @@ public class MonumentsActivity extends AppCompatActivity {
                 "https://www.google.com/maps/dir//Statue+of+George+Enescu,+Bulevardul+Mihail+Kog%C4%83lniceanu,+Bucure%C8%99ti/@44.4347229,26.0793548,15z/data=!4m16!1m6!3m5!1s0x0:0x93c7f0ac3cfa3bd7!2sStatue+of+George+Enescu!8m2!3d44.4347229!4d26.0793548!4m8!1m0!1m5!1m1!1s0x40b1ff6756b5300d:0x93c7f0ac3cfa3bd7!2m2!1d26.0793548!2d44.4347229!3e3",
                 "https://www.google.com/maps/dir//Nation's+Heroes+Memorial,+Strada+General+Candiano+Popescu+105,+Bucure%C8%99ti/@44.41127,26.0968789,15z/data=!4m16!1m6!3m5!1s0x0:0x3e7635bc09da2!2sNation's+Heroes+Memorial!8m2!3d44.41127!4d26.0968789!4m8!1m0!1m5!1m1!1s0x40b1ff07f2ee63ad:0x3e7635bc09da2!2m2!1d26.0968789!2d44.41127!3e3",
         };
+
+        // Add Images Resource IDs
         int[] monumentsImages = {
                 R.drawable.arcul_de_triumf,
                 R.drawable.memorial_of_rebirth,
@@ -80,10 +87,10 @@ public class MonumentsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                // Get Landmark object at current position
+                // Get Landmark Object at Current Position
                 Landmark monument = monuments.get(position);
 
-                // Start intent and send Landmark object to DetailActivity
+                // Start Intent and Send Landmark Object to DetailActivity
                 Intent detailActivity = new Intent(MonumentsActivity.this, DetailActivity.class);
                 detailActivity.putExtra("serialize_data", monument);
                 startActivity(detailActivity);
@@ -92,6 +99,12 @@ public class MonumentsActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Add Prefix for Phone Numbers or return empty String for later use in the DetailActivity.
+     * This is required in order to figure out if the related views are shown or hidden from the layout.
+     * @param phone The Phone Number as it comes from the Strings File.
+     * @return Returns the Phone Number with country prefix, or an Empty String.
+     */
     private String addPrefix(String phone) {
         if (!phone.isEmpty()) {
             return "+40 " + phone;

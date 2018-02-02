@@ -14,8 +14,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * Class that initializes the Detail Activity screen.
+ */
 public class DetailActivity extends AppCompatActivity {
 
+    // Constants to Differentiate Actions
     private static final int CALL = 243247;
     private static final int MAPS = 892343;
 
@@ -39,7 +43,7 @@ public class DetailActivity extends AppCompatActivity {
         // Set City Name
         fillText(R.id.detail_city, getString(R.string.city_name));
 
-        // Set Detail Title
+        // Set Detail Title (Landmark Name)
         fillText(R.id.detail_title, thisLandmark.getLandmarkName());
 
         // Set Header Image
@@ -55,14 +59,14 @@ public class DetailActivity extends AppCompatActivity {
             hideView(R.id.details_address_container);
         }
 
-        // Set Hours
+        // Set Business Hours
         if (!thisLandmark.getHours().isEmpty()) {
             fillText(R.id.details_hours_content, thisLandmark.getHours());
         } else {
             hideView(R.id.details_hours_container);
         }
 
-        // Set Phone & Attach Intent to Dial the Number
+        // Set Phone Number & Attach Intent to Dial the Number
         if (!thisLandmark.getPhone().isEmpty()) {
             fillText(R.id.details_phone_content, thisLandmark.getPhone());
             attachClickListener(R.id.detail_call_btn, CALL, thisLandmark.getPhone());
@@ -85,21 +89,42 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Method to add text to specified TextView.
+     * @param id The ID of the TextView.
+     * @param text The text to set to the TextView.
+     */
     private void fillText(int id, String text) {
         TextView thisTextView = (TextView) findViewById(id);
         thisTextView.setText(text);
     }
 
+    /**
+     * Method to add image to the Header.
+     * @param id The ID of ImageView to set the Image.
+     * @param image The ID of the Image Resource to set.
+     */
     private void fillImage(int id, int image) {
         ImageView thisImageView = (ImageView) findViewById(id);
         thisImageView.setImageResource(image);
     }
 
+    /**
+     * Method to hide the specified view from the layout.
+     * This is useful when certain fields from the Landmark object are empty.
+     * @param id The ID of the View to be hidden.
+     */
     private void hideView(int id) {
         View thisView = (View) findViewById(id);
         thisView.setVisibility(View.GONE);
     }
 
+    /**
+     * Method to attach a click listener for the specified button.
+     * @param buttonId The ID of the button to attach the click listener.
+     * @param action The selected action to be performed when the button is clicked.
+     * @param data The data to be sent to the Intent that will be executed, for the action selected.
+     */
     private void attachClickListener(int buttonId, final int action, final String data) {
         Button button = (Button) findViewById(buttonId);
         button.setOnClickListener(new View.OnClickListener() {
@@ -117,6 +142,10 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * This method launches a Google Maps Intent to get directions to the specified Landmark address.
+     * @param uri The URI for which to launch the Intent.
+     */
     private void launchMaps(String uri) {
         Uri gmIntentUri = Uri.parse(uri);
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmIntentUri);
@@ -126,6 +155,10 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * This method launches Phone Dialer app to call the specified Landmark Contact Phone.
+     * @param phone The Phone Number to dial.
+     */
     private void launchCall(String phone) {
         Uri phoneNumber = Uri.parse("tel:" + phone);
         Intent dialIntent = new Intent(Intent.ACTION_DIAL);

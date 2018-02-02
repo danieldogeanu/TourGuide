@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * Class that initializes the Museums Category screen.
+ */
 public class MuseumsActivity extends AppCompatActivity {
 
     @Override
@@ -32,12 +35,14 @@ public class MuseumsActivity extends AppCompatActivity {
             }
         });
 
-        // Get String Array Resources
+        // Get String Array Resources from the Strings File
         String[] museumsNames = getResources().getStringArray(R.array.museums_names);
         String[] museumsAdresses = getResources().getStringArray(R.array.museums_addresses);
         String[] museumsDescriptions = getResources().getStringArray(R.array.museums_descriptions);
         String[] museumsHours = getResources().getStringArray(R.array.museums_hours);
         String[] museumsPhones = getResources().getStringArray(R.array.museums_phones);
+
+        // Add Google Maps URIs
         String[] museumsMapUris = {
                 "https://www.google.com/maps/dir//The+National+Museum+of+Art+of+Romania,+Calea+Victoriei+49-53,+Bucure%C8%99ti+010063/@44.4393668,26.095874,15z/data=!4m16!1m6!3m5!1s0x0:0xdea7c86f153f2330!2sThe+National+Museum+of+Art+of+Romania!8m2!3d44.4393668!4d26.095874!4m8!1m0!1m5!1m1!1s0x40b1ff45a2c1486f:0xdea7c86f153f2330!2m2!1d26.095874!2d44.4393668!3e3",
                 "https://www.google.com/maps/dir//Muzeul+Satului+Dimitrie+Gusti,+%C8%98oseaua+Pavel+Dimitrievici+Kiseleff,+sector+1+28-30,+Bucure%C8%99ti+011347/@44.4723586,26.0765852,15z/data=!4m16!1m6!3m5!1s0x0:0x82df7091a7a741a3!2sMuzeul+Satului+Dimitrie+Gusti!8m2!3d44.4723586!4d26.0765852!4m8!1m0!1m5!1m1!1s0x40b202037c613773:0x82df7091a7a741a3!2m2!1d26.0765852!2d44.4723586!3e3",
@@ -50,6 +55,8 @@ public class MuseumsActivity extends AppCompatActivity {
                 "https://www.google.com/maps/dir//National+Military+Museum,+Strada+Mircea+Vulc%C4%83nescu+125-127,+Bucure%C8%99ti+010819/@44.4407516,26.076598,15z/data=!4m16!1m6!3m5!1s0x0:0x7a32aefdf0d8b116!2sNational+Military+Museum!8m2!3d44.4407516!4d26.076598!4m8!1m0!1m5!1m1!1s0x40b201e2102a641b:0x7a32aefdf0d8b116!2m2!1d26.076598!2d44.4407516!3e3",
                 "https://www.google.com/maps/dir//Muzeu+CFR,+Strada+G%C4%83rii+de+Nord,+Bucure%C8%99ti/@44.447968,26.0731395,15z/data=!4m16!1m6!3m5!1s0x0:0x376e0682d84587c1!2sMuzeu+CFR!8m2!3d44.447968!4d26.0731395!4m8!1m0!1m5!1m1!1s0x40b201fb1a0e7f69:0x376e0682d84587c1!2m2!1d26.0731395!2d44.447968!3e3"
         };
+
+        // Add Images Resource IDs
         int[] museumsImages = {
                 R.drawable.national_art_museum_of_romania,
                 R.drawable.dimitrie_gusti_national_village_museum,
@@ -88,10 +95,10 @@ public class MuseumsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                // Get Landmark object at current position
+                // Get Landmark Object at Current Position
                 Landmark museum = museums.get(position);
 
-                // Start intent and send Landmark object to DetailActivity
+                // Start Intent and Send Landmark Object to DetailActivity
                 Intent detailActivity = new Intent(MuseumsActivity.this, DetailActivity.class);
                 detailActivity.putExtra("serialize_data", museum);
                 startActivity(detailActivity);
@@ -100,6 +107,12 @@ public class MuseumsActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Add Prefix for Phone Numbers or return empty String for later use in the DetailActivity.
+     * This is required in order to figure out if the related views are shown or hidden from the layout.
+     * @param phone The Phone Number as it comes from the Strings File.
+     * @return Returns the Phone Number with country prefix, or an Empty String.
+     */
     private String addPrefix(String phone) {
         if (!phone.isEmpty()) {
             return "+40 " + phone;

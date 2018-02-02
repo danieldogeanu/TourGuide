@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * Class that initializes the Parks Category screen.
+ */
 public class ParksActivity extends AppCompatActivity {
 
     @Override
@@ -32,12 +35,14 @@ public class ParksActivity extends AppCompatActivity {
             }
         });
 
-        // Get String Array Resources
+        // Get String Array Resources from the Strings File
         String[] parksNames = getResources().getStringArray(R.array.parks_names);
         String[] parksAdresses = getResources().getStringArray(R.array.parks_addresses);
         String[] parksDescriptions = getResources().getStringArray(R.array.parks_descriptions);
         String[] parksHours = getResources().getStringArray(R.array.parks_hours);
         String[] parksPhones = getResources().getStringArray(R.array.parks_phones);
+
+        // Add Google Maps URIs
         String[] parksMapUris = {
                 "https://www.google.com/maps/dir//Zoo+Bucharest,+Strada+Vadul+Moldovei+4,+Bucure%C8%99ti+077190/@44.5172694,26.1044899,15z/data=!4m16!1m6!3m5!1s0x0:0x23f987bbc405cd2a!2sZoo+Bucharest!8m2!3d44.5172694!4d26.1044899!4m8!1m0!1m5!1m1!1s0x40b202dab1f665f5:0x23f987bbc405cd2a!2m2!1d26.1044899!2d44.5172694!3e3",
                 "https://www.google.com/maps/dir//King+Michael+I+Park,+Bucure%C8%99ti/@44.4702015,26.0827527,15z/data=!4m16!1m6!3m5!1s0x0:0x57f60ea89ec15526!2sKing+Michael+I+Park!8m2!3d44.4702015!4d26.0827527!4m8!1m0!1m5!1m1!1s0x40b20213bb079091:0x57f60ea89ec15526!2m2!1d26.0827527!2d44.4702015!3e3",
@@ -49,6 +54,8 @@ public class ParksActivity extends AppCompatActivity {
                 "https://www.google.com/maps/dir//Botanic+Garden,+%C8%98oseaua+Cotroceni+32,+Bucure%C8%99ti/@44.4372286,26.0626771,15z/data=!4m16!1m6!3m5!1s0x0:0x301135551489fb73!2sBotanic+Garden!8m2!3d44.4372286!4d26.0626771!4m8!1m0!1m5!1m1!1s0x40b201dd97d58297:0x301135551489fb73!2m2!1d26.0626771!2d44.4372286!3e3",
                 "https://www.google.com/maps/dir//Kiseleff+Park,+Bucure%C8%99ti/@44.4576517,26.0836661,15z/data=!4m16!1m6!3m5!1s0x0:0x2fe176e5d7d1b1ca!2sKiseleff+Park!8m2!3d44.4576517!4d26.0836661!4m8!1m0!1m5!1m1!1s0x40b20203c31f6dab:0x2fe176e5d7d1b1ca!2m2!1d26.0836661!2d44.4576517!3e3",
         };
+
+        // Add Images Resource IDs
         int[] parksImages = {
                 R.drawable.baneasa_zoo,
                 R.drawable.herastrau_park,
@@ -86,10 +93,10 @@ public class ParksActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                // Get Landmark object at current position
+                // Get Landmark Object at Current Position
                 Landmark park = parks.get(position);
 
-                // Start intent and send Landmark object to DetailActivity
+                // Start Intent and Send Landmark Object to DetailActivity
                 Intent detailActivity = new Intent(ParksActivity.this, DetailActivity.class);
                 detailActivity.putExtra("serialize_data", park);
                 startActivity(detailActivity);
@@ -98,6 +105,12 @@ public class ParksActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Add Prefix for Phone Numbers or return empty String for later use in the DetailActivity.
+     * This is required in order to figure out if the related views are shown or hidden from the layout.
+     * @param phone The Phone Number as it comes from the Strings File.
+     * @return Returns the Phone Number with country prefix, or an Empty String.
+     */
     private String addPrefix(String phone) {
         if (!phone.isEmpty()) {
             return "+40 " + phone;
