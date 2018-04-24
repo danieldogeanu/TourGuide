@@ -6,9 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -23,21 +21,14 @@ public class PalacesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_category);
 
         // Set Category Title
-        TextView categoryTitle = (TextView) findViewById(R.id.category_title);
-        categoryTitle.setText(getText(R.string.palaces_title));
+        Utils.fillText(PalacesActivity.this, R.id.category_title, getText(R.string.palaces_title));
 
         // Add Back (Up) Functionality
-        ImageButton backButton = (ImageButton) findViewById(R.id.category_back_btn);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        Utils.activateBackBtn(PalacesActivity.this);
 
         // Get String Array Resources from the Strings File
         String[] palacesNames = getResources().getStringArray(R.array.palaces_names);
-        String[] palacesAdresses = getResources().getStringArray(R.array.palaces_addresses);
+        String[] palacesAddresses = getResources().getStringArray(R.array.palaces_addresses);
         String[] palacesDescriptions = getResources().getStringArray(R.array.palaces_descriptions);
         String[] palacesHours = getResources().getStringArray(R.array.palaces_hours);
         String[] palacesPhones = getResources().getStringArray(R.array.palaces_phones);
@@ -68,9 +59,9 @@ public class PalacesActivity extends AppCompatActivity {
             palaces.add(new Landmark(
                     palacesNames[i],
                     palacesDescriptions[i],
-                    palacesAdresses[i],
+                    palacesAddresses[i],
                     palacesHours[i],
-                    addPrefix(palacesPhones[i]),
+                    Utils.addPrefix(palacesPhones[i]),
                     palacesMapUris[i],
                     palacesImages[i]));
         }
@@ -97,17 +88,4 @@ public class PalacesActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Add Prefix for Phone Numbers or return empty String for later use in the DetailActivity.
-     * This is required in order to figure out if the related views are shown or hidden from the layout.
-     * @param phone The Phone Number as it comes from the Strings File.
-     * @return Returns the Phone Number with country prefix, or an Empty String.
-     */
-    private String addPrefix(String phone) {
-        if (!phone.isEmpty()) {
-            return "+40 " + phone;
-        } else {
-            return phone;
-        }
-    }
 }
