@@ -6,9 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -23,21 +21,14 @@ public class MuseumsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_category);
 
         // Set Category Title
-        TextView categoryTitle = (TextView) findViewById(R.id.category_title);
-        categoryTitle.setText(getText(R.string.museums_title));
+        Utils.fillText(MuseumsActivity.this, R.id.category_title, getText(R.string.museums_title));
 
         // Add Back (Up) Functionality
-        ImageButton backButton = (ImageButton) findViewById(R.id.category_back_btn);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        Utils.activateBackBtn(MuseumsActivity.this);
 
         // Get String Array Resources from the Strings File
         String[] museumsNames = getResources().getStringArray(R.array.museums_names);
-        String[] museumsAdresses = getResources().getStringArray(R.array.museums_addresses);
+        String[] museumsAddresses = getResources().getStringArray(R.array.museums_addresses);
         String[] museumsDescriptions = getResources().getStringArray(R.array.museums_descriptions);
         String[] museumsHours = getResources().getStringArray(R.array.museums_hours);
         String[] museumsPhones = getResources().getStringArray(R.array.museums_phones);
@@ -78,9 +69,9 @@ public class MuseumsActivity extends AppCompatActivity {
             museums.add(new Landmark(
                     museumsNames[i],
                     museumsDescriptions[i],
-                    museumsAdresses[i],
+                    museumsAddresses[i],
                     museumsHours[i],
-                    addPrefix(museumsPhones[i]),
+                    Utils.addPrefix(museumsPhones[i]),
                     museumsMapUris[i],
                     museumsImages[i]));
         }
@@ -107,17 +98,4 @@ public class MuseumsActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Add Prefix for Phone Numbers or return empty String for later use in the DetailActivity.
-     * This is required in order to figure out if the related views are shown or hidden from the layout.
-     * @param phone The Phone Number as it comes from the Strings File.
-     * @return Returns the Phone Number with country prefix, or an Empty String.
-     */
-    private String addPrefix(String phone) {
-        if (!phone.isEmpty()) {
-            return "+40 " + phone;
-        } else {
-            return phone;
-        }
-    }
 }
