@@ -6,9 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -23,21 +21,14 @@ public class ParksActivity extends AppCompatActivity {
         setContentView(R.layout.activity_category);
 
         // Set Category Title
-        TextView categoryTitle = (TextView) findViewById(R.id.category_title);
-        categoryTitle.setText(getText(R.string.parks_title));
+        Utils.fillText(ParksActivity.this, R.id.category_title, getText(R.string.parks_title));
 
         // Add Back (Up) Functionality
-        ImageButton backButton = (ImageButton) findViewById(R.id.category_back_btn);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        Utils.activateBackBtn(ParksActivity.this);
 
         // Get String Array Resources from the Strings File
         String[] parksNames = getResources().getStringArray(R.array.parks_names);
-        String[] parksAdresses = getResources().getStringArray(R.array.parks_addresses);
+        String[] parksAddresses = getResources().getStringArray(R.array.parks_addresses);
         String[] parksDescriptions = getResources().getStringArray(R.array.parks_descriptions);
         String[] parksHours = getResources().getStringArray(R.array.parks_hours);
         String[] parksPhones = getResources().getStringArray(R.array.parks_phones);
@@ -76,9 +67,9 @@ public class ParksActivity extends AppCompatActivity {
             parks.add(new Landmark(
                     parksNames[i],
                     parksDescriptions[i],
-                    parksAdresses[i],
+                    parksAddresses[i],
                     parksHours[i],
-                    addPrefix(parksPhones[i]),
+                    Utils.addPrefix(parksPhones[i]),
                     parksMapUris[i],
                     parksImages[i]));
         }
@@ -105,17 +96,4 @@ public class ParksActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Add Prefix for Phone Numbers or return empty String for later use in the DetailActivity.
-     * This is required in order to figure out if the related views are shown or hidden from the layout.
-     * @param phone The Phone Number as it comes from the Strings File.
-     * @return Returns the Phone Number with country prefix, or an Empty String.
-     */
-    private String addPrefix(String phone) {
-        if (!phone.isEmpty()) {
-            return "+40 " + phone;
-        } else {
-            return phone;
-        }
-    }
 }
