@@ -20,10 +20,16 @@
             android:text="@string/placeholder_category_title"
             style="@style/CategoryActionBarTitle" />
 
+        <android.support.design.widget.TabLayout
+            android:id="@+id/category_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </RelativeLayout>
 
-    <ListView
-        android:id="@+id/cat_items_list"
-        style="@style/CategoryItemsList" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/category_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

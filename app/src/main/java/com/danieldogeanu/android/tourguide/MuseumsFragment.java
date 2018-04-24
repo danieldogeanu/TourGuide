@@ -3,8 +3,10 @@ package com.danieldogeanu.android.tourguide;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -13,18 +15,14 @@ import java.util.ArrayList;
 /**
  * Class that initializes the Museums Category screen.
  */
-public class MuseumsActivity extends AppCompatActivity {
+public class MuseumsFragment extends Fragment {
 
+    public MuseumsFragment() {}
+
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category);
-
-        // Set Category Title
-        Utils.fillText(MuseumsActivity.this, R.id.category_title, getText(R.string.museums_title));
-
-        // Add Back (Up) Functionality
-        Utils.activateBackBtn(MuseumsActivity.this);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.list, container, false);
 
         // Get String Array Resources from the Strings File
         String[] museumsNames = getResources().getStringArray(R.array.museums_names);
@@ -77,8 +75,8 @@ public class MuseumsActivity extends AppCompatActivity {
         }
 
         // Set Custom List View Adapter
-        ListView listView = (ListView) findViewById(R.id.cat_items_list);
-        LandmarkAdapter adapter = new LandmarkAdapter(MuseumsActivity.this, museums, listView);
+        ListView listView = (ListView) rootView.findViewById(R.id.cat_items_list);
+        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), museums, listView);
         listView.setAdapter(adapter);
 
         // Set Click Listeners for Each Item
@@ -90,12 +88,13 @@ public class MuseumsActivity extends AppCompatActivity {
                 Landmark museum = museums.get(position);
 
                 // Start Intent and Send Landmark Object to DetailActivity
-                Intent detailActivity = new Intent(MuseumsActivity.this, DetailActivity.class);
+                Intent detailActivity = new Intent(getContext(), DetailActivity.class);
                 detailActivity.putExtra("serialize_data", museum);
                 startActivity(detailActivity);
 
             }
         });
-    }
 
+        return rootView;
+    }
 }

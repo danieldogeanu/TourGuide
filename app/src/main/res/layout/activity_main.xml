@@ -42,7 +42,7 @@
                     style="@style/FancyButtonImage" />
 
                 <TextView
-                    android:text="@string/museums_title"
+                    android:text="@string/cat_museums"
                     style="@style/FancyButtonText" />
 
             </LinearLayout>
@@ -58,7 +58,7 @@
                     style="@style/FancyButtonImage" />
 
                 <TextView
-                    android:text="@string/parks_title"
+                    android:text="@string/cat_parks"
                     style="@style/FancyButtonText" />
 
             </LinearLayout>
@@ -73,7 +73,7 @@
                     style="@style/FancyButtonImage" />
 
                 <TextView
-                    android:text="@string/palaces_title"
+                    android:text="@string/cat_palaces"
                     style="@style/FancyButtonText" />
 
             </LinearLayout>
@@ -89,7 +89,7 @@
                     style="@style/FancyButtonImage" />
 
                 <TextView
-                    android:text="@string/monuments_title"
+                    android:text="@string/cat_monuments"
                     style="@style/FancyButtonText" />
 
             </LinearLayout>

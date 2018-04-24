@@ -3,8 +3,10 @@ package com.danieldogeanu.android.tourguide;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -13,18 +15,14 @@ import java.util.ArrayList;
 /**
  * Class that initializes the Palaces Category screen.
  */
-public class PalacesActivity extends AppCompatActivity {
+public class PalacesFragment extends Fragment {
 
+    public PalacesFragment() {}
+
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category);
-
-        // Set Category Title
-        Utils.fillText(PalacesActivity.this, R.id.category_title, getText(R.string.palaces_title));
-
-        // Add Back (Up) Functionality
-        Utils.activateBackBtn(PalacesActivity.this);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.list, container, false);
 
         // Get String Array Resources from the Strings File
         String[] palacesNames = getResources().getStringArray(R.array.palaces_names);
@@ -67,8 +65,8 @@ public class PalacesActivity extends AppCompatActivity {
         }
 
         // Set Custom List View Adapter
-        ListView listView = (ListView) findViewById(R.id.cat_items_list);
-        LandmarkAdapter adapter = new LandmarkAdapter(PalacesActivity.this, palaces, listView);
+        ListView listView = (ListView) rootView.findViewById(R.id.cat_items_list);
+        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), palaces, listView);
         listView.setAdapter(adapter);
 
         // Set Click Listeners for Each Item
@@ -80,12 +78,13 @@ public class PalacesActivity extends AppCompatActivity {
                 Landmark palace = palaces.get(position);
 
                 // Start Intent and Send Landmark Object to DetailActivity
-                Intent detailActivity = new Intent(PalacesActivity.this, DetailActivity.class);
+                Intent detailActivity = new Intent(getContext(), DetailActivity.class);
                 detailActivity.putExtra("serialize_data", palace);
                 startActivity(detailActivity);
 
             }
         });
-    }
 
+        return rootView;
+    }
 }

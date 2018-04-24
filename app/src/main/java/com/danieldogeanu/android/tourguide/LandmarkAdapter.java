@@ -47,7 +47,7 @@ public class LandmarkAdapter extends ArrayAdapter<Landmark> {
         // Get or Inflate the Category Item View
         View listItemView = convertView;
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.activity_category_item, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item, parent, false);
         }
 
         // Get current Landmark object from the ArrayList
