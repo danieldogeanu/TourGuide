@@ -1,9 +1,9 @@
 package com.danieldogeanu.android.tourguide;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,7 +33,7 @@ public class Utils {
      * @param id The ID of the TextView.
      * @param text The text to set to the TextView.
      */
-    public static void fillText(Activity activity, int id, String text) {
+    public static void fillText(Activity activity, int id, CharSequence text) {
         TextView thisTextView = (TextView) activity.findViewById(id);
         thisTextView.setText(text);
     }
@@ -44,7 +44,7 @@ public class Utils {
      * @param id The ID of the TextView.
      * @param text The text to set to the TextView.
      */
-    public static void fillText(View view, int id, String text) {
+    public static void fillText(View view, int id, CharSequence text) {
         TextView thisTextView = (TextView) view.findViewById(id);
         thisTextView.setText(text);
     }
@@ -80,6 +80,34 @@ public class Utils {
     public static void hideView(Activity activity, int id) {
         View thisView = (View) activity.findViewById(id);
         thisView.setVisibility(View.GONE);
+    }
+
+    /**
+     * Add Prefix for Phone Numbers or return empty String for later use in the DetailActivity.
+     * This is required in order to figure out if the related views are shown or hidden from the layout.
+     * @param phone The Phone Number as it comes from the Strings File.
+     * @return Returns the Phone Number with country prefix, or an Empty String.
+     */
+    public static String addPrefix(String phone) {
+        if (!phone.isEmpty()) {
+            return "+40 " + phone;
+        } else {
+            return phone;
+        }
+    }
+
+    /**
+     * Activate the Back (Up) functionality for the current Activity.
+     * @param activity The Activity from which this method is called.
+     */
+    public static void activateBackBtn(final Activity activity) {
+        ImageButton backButton = (ImageButton) activity.findViewById(R.id.category_back_btn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.finish();
+            }
+        });
     }
 
 }
