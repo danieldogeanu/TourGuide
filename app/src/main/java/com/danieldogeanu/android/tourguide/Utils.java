@@ -1,6 +1,7 @@
 package com.danieldogeanu.android.tourguide;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
@@ -38,6 +39,17 @@ public class Utils {
     }
 
     /**
+     * Method to add text to specified TextView.
+     * @param view The View from which this method is called.
+     * @param id The ID of the TextView.
+     * @param text The text to set to the TextView.
+     */
+    public static void fillText(View view, int id, String text) {
+        TextView thisTextView = (TextView) view.findViewById(id);
+        thisTextView.setText(text);
+    }
+
+    /**
      * Method to add image to specified ImageView.
      * @param activity The Activity from which this method is called.
      * @param id The ID of ImageView to set the Image.
@@ -45,6 +57,17 @@ public class Utils {
      */
     public static void fillImage(Activity activity, int id, int image) {
         ImageView thisImageView = (ImageView) activity.findViewById(id);
+        thisImageView.setImageResource(image);
+    }
+
+    /**
+     * Method to add image to specified ImageView.
+     * @param view The View from which this method is called.
+     * @param id The ID of ImageView to set the Image.
+     * @param image The ID of the Image Resource to set.
+     */
+    public static void fillImage(View view, int id, int image) {
+        ImageView thisImageView = (ImageView) view.findViewById(id);
         thisImageView.setImageResource(image);
     }
 

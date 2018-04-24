@@ -7,9 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -56,16 +54,13 @@ public class LandmarkAdapter extends ArrayAdapter<Landmark> {
         Landmark currentLandmark = getItem(position);
 
         // Set the Category Item Title
-        TextView catItemTitle = (TextView) listItemView.findViewById(R.id.cat_item_title);
-        catItemTitle.setText(currentLandmark.getLandmarkName());
+        Utils.fillText(listItemView, R.id.cat_item_title, currentLandmark.getLandmarkName());
 
         // Set the Category Item Address
-        TextView catItemAddress = (TextView) listItemView.findViewById(R.id.cat_item_address);
-        catItemAddress.setText(currentLandmark.getAddress());
+        Utils.fillText(listItemView, R.id.cat_item_address, currentLandmark.getAddress());
 
         // Set the Category Item Background Image
-        ImageView catBgImage = (ImageView) listItemView.findViewById(R.id.cat_bg_image);
-        catBgImage.setImageResource(currentLandmark.getImageId());
+        Utils.fillImage(listItemView, R.id.cat_bg_image, currentLandmark.getImageId());
 
         // Return the Fully Assembled Category Item
         return listItemView;
