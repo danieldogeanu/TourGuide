@@ -8,6 +8,7 @@
 
         <ImageButton
             android:id="@+id/category_back_btn"
+            android:contentDescription="@string/cd_back_btn"
             style="@style/CategoryActionBarBackButton" />
 
         <LinearLayout

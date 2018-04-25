@@ -14,14 +14,17 @@
             <ImageView
                 android:id="@+id/detail_header_image"
                 tools:src="@drawable/placeholder_image"
+                android:contentDescription="@string/cd_header_img"
                 style="@style/DetailHeaderImage" />
 
             <ImageView
                 android:id="@+id/detail_header_overlay"
+                android:contentDescription="@string/cd_header_ovrl"
                 style="@style/DetailHeaderOverlay" />
 
             <ImageButton
                 android:id="@+id/detail_back_btn"
+                android:contentDescription="@string/cd_back_btn"
                 style="@style/DetailBackButton" />
 
             <TextView
@@ -38,6 +41,7 @@
 
         <ImageView
             android:id="@+id/detail_content_bg"
+            android:contentDescription="@string/cd_content_bg"
             style="@style/DetailContentBackground" />
 
         <RelativeLayout

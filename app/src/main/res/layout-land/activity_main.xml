@@ -7,6 +7,7 @@
     <ImageView
         android:id="@+id/main_bg_image"
         android:src="@drawable/main_activity_bg"
+        android:contentDescription="@string/cd_main_bg_img"
         style="@style/MainActivityBackgroundImage" />
 
     <RelativeLayout
@@ -39,6 +40,7 @@
 
                 <ImageView
                     android:src="@drawable/ic_museums"
+                    android:contentDescription="@string/cd_fancy_btn"
                     style="@style/FancyButtonImage" />
 
                 <TextView
@@ -55,6 +57,7 @@
 
                 <ImageView
                     android:src="@drawable/ic_parks"
+                    android:contentDescription="@string/cd_fancy_btn"
                     style="@style/FancyButtonImage" />
 
                 <TextView
@@ -71,6 +74,7 @@
 
                 <ImageView
                     android:src="@drawable/ic_palaces"
+                    android:contentDescription="@string/cd_fancy_btn"
                     style="@style/FancyButtonImage" />
 
                 <TextView
@@ -87,6 +91,7 @@
 
                 <ImageView
                     android:src="@drawable/ic_monuments"
+                    android:contentDescription="@string/cd_fancy_btn"
                     style="@style/FancyButtonImage" />
 
                 <TextView
