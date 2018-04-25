@@ -36,6 +36,7 @@
                 android:id="@+id/museums_btn"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 style="@style/FancyButton">
 
                 <ImageView
@@ -53,6 +54,7 @@
                 android:id="@+id/parks_btn"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/museums_btn"
+                android:layout_toEndOf="@id/museums_btn"
                 style="@style/FancyButton">
 
                 <ImageView
@@ -70,6 +72,7 @@
                 android:id="@+id/palaces_btn"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/parks_btn"
+                android:layout_toEndOf="@id/parks_btn"
                 style="@style/FancyButton">
 
                 <ImageView
@@ -87,6 +90,7 @@
                 android:id="@+id/monuments_btn"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/palaces_btn"
+                android:layout_toEndOf="@id/palaces_btn"
                 style="@style/FancyButton">
 
                 <ImageView
@@ -103,16 +107,19 @@
             <View
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/museums_btn"
+                android:layout_toEndOf="@id/museums_btn"
                 style="@style/VerticalDivider" />
 
             <View
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/parks_btn"
+                android:layout_toEndOf="@id/parks_btn"
                 style="@style/VerticalDivider" />
 
             <View
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/palaces_btn"
+                android:layout_toEndOf="@id/palaces_btn"
                 style="@style/VerticalDivider" />
 
         </RelativeLayout>

@@ -9,6 +9,7 @@
         android:id="@+id/cat_bg_image"
         style="@style/CategoryItemBackgroundImage"
         tools:src="@drawable/placeholder_image"
+        android:contentDescription="@string/cd_category_item_bg"
         android:tint="@color/TransparentBlack" />
 
     <TextView
@@ -23,6 +24,7 @@
 
     <ImageView
         android:id="@+id/cat_item_arrow"
+        android:contentDescription="@string/cd_category_item_arr"
         style="@style/CategoryItemArrow" />
 
 </RelativeLayout>

@@ -21,6 +21,8 @@
     <string name="cd_header_img">Header Image</string>
     <string name="cd_header_ovrl">Header Overlay</string>
     <string name="cd_content_bg">Content Background</string>
+    <string name="cd_category_item_bg">Category Item Background</string>
+    <string name="cd_category_item_arr">Open Item</string>
     <string name="cd_main_bg_img">Main Background Image</string>
     <string name="cd_fancy_btn">Fancy Button Icon</string>
 
