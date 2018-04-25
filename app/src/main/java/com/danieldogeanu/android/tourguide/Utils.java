@@ -1,6 +1,7 @@
 package com.danieldogeanu.android.tourguide;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -26,6 +27,17 @@ public class Utils {
                 currentActivity.startActivity(thisIntent);
             }
         });
+    }
+
+    /**
+     * Method to start Intent and send the Landmark object to the DetailActivity.
+     * @param context The Context from which this method is called.
+     * @param landmark The Landmark object to be passed.
+     */
+    public static void openDetailActivity(Context context, Landmark landmark) {
+        Intent detailActivity = new Intent(context, DetailActivity.class);
+        detailActivity.putExtra("serialize_data", landmark);
+        context.startActivity(detailActivity);
     }
 
     /**

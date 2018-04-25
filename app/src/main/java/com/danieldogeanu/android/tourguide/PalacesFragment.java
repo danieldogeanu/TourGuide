@@ -1,6 +1,5 @@
 package com.danieldogeanu.android.tourguide;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -78,9 +77,7 @@ public class PalacesFragment extends Fragment {
                 Landmark palace = palaces.get(position);
 
                 // Start Intent and Send Landmark Object to DetailActivity
-                Intent detailActivity = new Intent(getContext(), DetailActivity.class);
-                detailActivity.putExtra("serialize_data", palace);
-                startActivity(detailActivity);
+                Utils.openDetailActivity(getContext(), palace);
 
             }
         });
