@@ -13,7 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 /**
- * Class that initializes the Monuments Category screen.
+ * MonumentsFragment is the Class that displays the Monuments Tab in the Categories Activity.
  */
 public class MonumentsFragment extends Fragment {
 
@@ -68,7 +68,7 @@ public class MonumentsFragment extends Fragment {
 
         // Set Custom List View Adapter
         ListView listView = (ListView) rootView.findViewById(R.id.cat_items_list);
-        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), monuments, listView);
+        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), monuments);
         listView.setAdapter(adapter);
 
         // Set Click Listeners for Each Item

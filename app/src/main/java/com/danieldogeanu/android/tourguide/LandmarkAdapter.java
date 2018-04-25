@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -17,20 +16,13 @@ import java.util.ArrayList;
  */
 public class LandmarkAdapter extends ArrayAdapter<Landmark> {
 
-    /** Constant used for debugging purposes. */
-    public static final String LOG_TAG = LandmarkAdapter.class.getSimpleName();
-
-    private ListView mLandmarkListView;
-
     /**
      * LandmarkAdapter Constructor. Accepts 3 parameters.
      * @param context The Activity on which this adapter will be run.
      * @param landmarks The ArrayList with all the Landmarks.
-     * @param view The ListView to which this Adapter is attached.
      */
-    public LandmarkAdapter(Activity context, ArrayList<Landmark> landmarks, ListView view) {
+    public LandmarkAdapter(Activity context, ArrayList<Landmark> landmarks) {
         super(context, 0, landmarks);
-        mLandmarkListView = view;
     }
 
     /**

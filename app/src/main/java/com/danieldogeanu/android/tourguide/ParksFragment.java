@@ -13,7 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 /**
- * Class that initializes the Parks Category screen.
+ * ParksFragment is the Class that displays the Parks Tab in the Categories Activity.
  */
 public class ParksFragment extends Fragment {
 
@@ -74,7 +74,7 @@ public class ParksFragment extends Fragment {
 
         // Set Custom List View Adapter
         ListView listView = (ListView) rootView.findViewById(R.id.cat_items_list);
-        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), parks, listView);
+        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), parks);
         listView.setAdapter(adapter);
 
         // Set Click Listeners for Each Item

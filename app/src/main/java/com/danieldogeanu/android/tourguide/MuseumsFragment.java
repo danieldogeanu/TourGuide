@@ -13,7 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 /**
- * Class that initializes the Museums Category screen.
+ * MuseumsFragment is the Class that displays the Museums Tab in the Categories Activity.
  */
 public class MuseumsFragment extends Fragment {
 
@@ -76,7 +76,7 @@ public class MuseumsFragment extends Fragment {
 
         // Set Custom List View Adapter
         ListView listView = (ListView) rootView.findViewById(R.id.cat_items_list);
-        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), museums, listView);
+        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), museums);
         listView.setAdapter(adapter);
 
         // Set Click Listeners for Each Item

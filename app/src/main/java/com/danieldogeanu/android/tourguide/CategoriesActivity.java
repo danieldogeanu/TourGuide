@@ -5,6 +5,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/**
+ * Class that initializes the Categories Activity for the app.
+ */
 public class CategoriesActivity extends AppCompatActivity {
 
     @Override

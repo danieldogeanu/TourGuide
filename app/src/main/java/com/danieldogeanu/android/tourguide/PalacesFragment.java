@@ -13,7 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 /**
- * Class that initializes the Palaces Category screen.
+ * PalacesFragment is the Class that displays the Palaces Tab in the Categories Activity.
  */
 public class PalacesFragment extends Fragment {
 
@@ -66,7 +66,7 @@ public class PalacesFragment extends Fragment {
 
         // Set Custom List View Adapter
         ListView listView = (ListView) rootView.findViewById(R.id.cat_items_list);
-        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), palaces, listView);
+        LandmarkAdapter adapter = new LandmarkAdapter(getActivity(), palaces);
         listView.setAdapter(adapter);
 
         // Set Click Listeners for Each Item
