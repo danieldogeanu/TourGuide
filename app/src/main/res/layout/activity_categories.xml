@@ -10,20 +10,20 @@
             android:id="@+id/category_back_btn"
             style="@style/CategoryActionBarBackButton" />
 
-        <TextView
-            android:id="@+id/category_subtitle"
-            android:text="@string/city_name"
-            style="@style/CategoryActionBarSubtitle" />
+        <LinearLayout
+            android:id="@+id/category_title_container"
+            style="@style/CategoryActionBarTitleContainer">
 
-        <TextView
-            android:id="@+id/category_title"
-            android:text="@string/placeholder_category_title"
-            style="@style/CategoryActionBarTitle" />
+            <TextView
+                android:id="@+id/category_title"
+                android:text="@string/city_name"
+                style="@style/CategoryActionBarTitle" />
+
+        </LinearLayout>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/category_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            style="@style/CategoryActionBarTabLayout" />
 
     </RelativeLayout>
 
