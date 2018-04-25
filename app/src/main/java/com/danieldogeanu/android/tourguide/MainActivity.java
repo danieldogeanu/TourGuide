@@ -14,14 +14,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Attach Activities for Each Button
-        Utils.openActivity(MainActivity.this, R.id.museums_btn, CategoriesActivity.class);
-        Utils.openActivity(MainActivity.this, R.id.parks_btn, CategoriesActivity.class);
-        Utils.openActivity(MainActivity.this, R.id.palaces_btn, CategoriesActivity.class);
-        Utils.openActivity(MainActivity.this, R.id.monuments_btn, CategoriesActivity.class);
-
-        // TODO: Find a way to select the TAB associated with the button that user clicks.
+        Utils.openCategoriesActivity(MainActivity.this, R.id.museums_btn, 0);
+        Utils.openCategoriesActivity(MainActivity.this, R.id.parks_btn, 1);
+        Utils.openCategoriesActivity(MainActivity.this, R.id.palaces_btn, 2);
+        Utils.openCategoriesActivity(MainActivity.this, R.id.monuments_btn, 3);
     }
-
-
 
 }

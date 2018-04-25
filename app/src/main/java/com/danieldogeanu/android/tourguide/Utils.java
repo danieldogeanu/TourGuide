@@ -11,17 +11,18 @@ import android.widget.TextView;
 public class Utils {
 
     /**
-     * Method to attach the onClickListener to buttons and launch the selected Activity Intent.
+     * Method to attach the onClickListener to buttons and launch the CategoriesActivity.
      * @param currentActivity The Activity from which this method is called.
      * @param buttonId The ID of the button that the click listener is going to be attached.
-     * @param activityToOpen The activity to launch when the button is clicked.
+     * @param selectTab The Tab to select when the button is clicked and Activity open.
      */
-    public static void openActivity(final Activity currentActivity, int buttonId, final Class activityToOpen) {
+    public static void openCategoriesActivity(final Activity currentActivity, int buttonId, final int selectTab) {
         LinearLayout button = (LinearLayout) currentActivity.findViewById(buttonId);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent thisIntent = new Intent(currentActivity, activityToOpen);
+                Intent thisIntent = new Intent(currentActivity, CategoriesActivity.class);
+                thisIntent.putExtra("selected_index", selectTab);
                 currentActivity.startActivity(thisIntent);
             }
         });

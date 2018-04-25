@@ -23,5 +23,9 @@ public class CategoriesActivity extends AppCompatActivity {
         // Set Tab Titles
         TabLayout tabLayout = (TabLayout) findViewById(R.id.category_tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        // Select Tab from Intent
+        TabLayout.Tab tab = tabLayout.getTabAt(getIntent().getIntExtra("selected_index", 0));
+        if (tab != null) tab.select();
     }
 }
