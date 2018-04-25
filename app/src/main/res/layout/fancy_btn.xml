@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FancyButton">
+
+    <ImageView
+        android:id="@+id/fancy_btn_img"
+        tools:src="@drawable/ic_parks"
+        android:contentDescription="@string/cd_fancy_btn"
+        style="@style/FancyButtonImage" />
+
+    <TextView
+        android:id="@+id/fancy_btn_txt"
+        tools:text="@string/cat_parks"
+        style="@style/FancyButtonText" />
+
+</LinearLayout>

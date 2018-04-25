@@ -32,77 +32,45 @@
             android:id="@+id/btns_container"
             style="@style/FancyButtonsContainerLandscape">
 
-            <LinearLayout
+            <include
+                layout="@layout/fancy_btn"
                 android:id="@+id/museums_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                style="@style/FancyButton">
+                android:layout_alignParentStart="true" />
 
-                <ImageView
-                    android:src="@drawable/ic_museums"
-                    android:contentDescription="@string/cd_fancy_btn"
-                    style="@style/FancyButtonImage" />
-
-                <TextView
-                    android:text="@string/cat_museums"
-                    style="@style/FancyButtonText" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <include
+                layout="@layout/fancy_btn"
                 android:id="@+id/parks_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/museums_btn"
-                android:layout_toEndOf="@id/museums_btn"
-                style="@style/FancyButton">
+                android:layout_toEndOf="@id/museums_btn" />
 
-                <ImageView
-                    android:src="@drawable/ic_parks"
-                    android:contentDescription="@string/cd_fancy_btn"
-                    style="@style/FancyButtonImage" />
-
-                <TextView
-                    android:text="@string/cat_parks"
-                    style="@style/FancyButtonText" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <include
+                layout="@layout/fancy_btn"
                 android:id="@+id/palaces_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/parks_btn"
-                android:layout_toEndOf="@id/parks_btn"
-                style="@style/FancyButton">
+                android:layout_toEndOf="@id/parks_btn" />
 
-                <ImageView
-                    android:src="@drawable/ic_palaces"
-                    android:contentDescription="@string/cd_fancy_btn"
-                    style="@style/FancyButtonImage" />
-
-                <TextView
-                    android:text="@string/cat_palaces"
-                    style="@style/FancyButtonText" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <include
+                layout="@layout/fancy_btn"
                 android:id="@+id/monuments_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/palaces_btn"
-                android:layout_toEndOf="@id/palaces_btn"
-                style="@style/FancyButton">
-
-                <ImageView
-                    android:src="@drawable/ic_monuments"
-                    android:contentDescription="@string/cd_fancy_btn"
-                    style="@style/FancyButtonImage" />
-
-                <TextView
-                    android:text="@string/cat_monuments"
-                    style="@style/FancyButtonText" />
-
-            </LinearLayout>
+                android:layout_toEndOf="@id/palaces_btn" />
 
             <View
                 android:layout_alignParentTop="true"

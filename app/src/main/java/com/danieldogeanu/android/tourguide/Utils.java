@@ -12,6 +12,21 @@ import android.widget.TextView;
 public class Utils {
 
     /**
+     * Method to create the Fancy Button in the MainActivity.
+     * @param activity The Activity from which this method is called.
+     * @param includedBtnId The ID of the button to be created.
+     * @param drawableId The Drawable ID of the icon to be used for this button.
+     * @param label The text label to be used for this button.
+     */
+    public static void createFancyButton(Activity activity, int includedBtnId, int drawableId, CharSequence label) {
+        View btnInclude = (View) activity.findViewById(includedBtnId);
+        ImageView innerBtnImg = (ImageView) btnInclude.findViewById(R.id.fancy_btn_img);
+        TextView innerBtnTxt = (TextView) btnInclude.findViewById(R.id.fancy_btn_txt);
+        innerBtnImg.setImageResource(drawableId);
+        innerBtnTxt.setText(label);
+    }
+
+    /**
      * Method to attach the onClickListener to buttons and launch the CategoriesActivity.
      * @param currentActivity The Activity from which this method is called.
      * @param buttonId The ID of the button that the click listener is going to be attached.
