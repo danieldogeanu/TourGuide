@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/main_bg_image"
         android:src="@drawable/main_activity_bg"
-        style="@style/MainActicityBackgroundImage" />
+        style="@style/MainActivityBackgroundImage" />
 
     <RelativeLayout
         android:id="@+id/screen_container"
