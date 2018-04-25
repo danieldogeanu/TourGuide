@@ -1,11 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="19">true</item>
     </style>
 
     <style name="Root">
@@ -150,7 +150,7 @@
         <item name="android:paddingLeft">12dp</item>
         <item name="android:paddingRight">12dp</item>
         <item name="android:scaleType">centerInside</item>
-        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
         <item name="android:src">@drawable/ic_chevron_left</item>
         <item name="android:tint">@color/White</item>
     </style>
@@ -292,7 +292,7 @@
         <item name="android:paddingRight">16dp</item>
         <item name="android:src">@drawable/ic_chevron_left</item>
         <item name="android:scaleType">centerInside</item>
-        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
         <item name="android:tint">@color/White</item>
     </style>
 
@@ -408,7 +408,7 @@
     <style name="DetailCtaButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
         <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
         <item name="android:textColor">@color/White</item>
         <item name="android:textSize">16sp</item>
