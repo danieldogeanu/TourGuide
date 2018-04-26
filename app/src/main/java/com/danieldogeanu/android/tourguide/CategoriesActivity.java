@@ -16,7 +16,7 @@ public class CategoriesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_categories);
 
         // Add Back (Up) Functionality
-        Utils.activateBackBtn(CategoriesActivity.this);
+        Utils.activateBackBtn(CategoriesActivity.this, R.id.category_back_btn);
 
         // Initiate the ViewPager
         ViewPager viewPager = (ViewPager) findViewById(R.id.category_view_pager);

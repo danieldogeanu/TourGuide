@@ -10,7 +10,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 /**
  * Class that initializes the Detail Activity screen.
@@ -27,13 +26,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         // Add Back (Up) Functionality
-        ImageButton backButton = (ImageButton) findViewById(R.id.detail_back_btn);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        Utils.activateBackBtn(DetailActivity.this, R.id.detail_back_btn);
 
         // Get Landmark Object
         Landmark thisLandmark = (Landmark) getIntent().getSerializableExtra("serialize_data");

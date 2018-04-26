@@ -127,9 +127,10 @@ public class Utils {
     /**
      * Activate the Back (Up) functionality for the current Activity.
      * @param activity The Activity from which this method is called.
+     * @param id The ID of the Back Button.
      */
-    public static void activateBackBtn(final Activity activity) {
-        ImageButton backButton = (ImageButton) activity.findViewById(R.id.category_back_btn);
+    public static void activateBackBtn(final Activity activity, int id) {
+        ImageButton backButton = (ImageButton) activity.findViewById(id);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
