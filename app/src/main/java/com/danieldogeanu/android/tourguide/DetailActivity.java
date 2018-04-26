@@ -1,6 +1,8 @@
 package com.danieldogeanu.android.tourguide;
 
 import android.Manifest;
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -142,17 +144,43 @@ public class DetailActivity extends AppCompatActivity {
     private void addActionBarBackground() {
         final ScrollView detailScrollView = (ScrollView) findViewById(R.id.detail_scroll_view);
         final LinearLayout detailActionBar = (LinearLayout) findViewById(R.id.detail_action_bar);
+
         detailScrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+            boolean colorChanged = false;
+
             @Override
             public void onScrollChanged() {
                 int scrollY = detailScrollView.getScrollY();
-                if (scrollY > 100) {
-                    detailActionBar.setBackgroundColor(getResources().getColor(R.color.Yellow));
-                } else {
-                    detailActionBar.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+                if ((scrollY > 100) && (!colorChanged)) {
+                    animateColorBackground(detailActionBar, android.R.color.transparent, R.color.Yellow);
+                    colorChanged = true;
+                } else if ((scrollY < 100) && (colorChanged)) {
+                    animateColorBackground(detailActionBar, R.color.Yellow, android.R.color.transparent);
+                    colorChanged = false;
                 }
             }
         });
+    }
+
+    /**
+     * Animate the Color Background of the selected view.
+     * @param view The view to animate.
+     * @param startColorId The start color Resource ID.
+     * @param endColorId The end color Resource ID.
+     */
+    private void animateColorBackground(final View view, int startColorId, int endColorId) {
+        int startColor = getResources().getColor(startColorId);
+        int endColor = getResources().getColor(endColorId);
+        ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), startColor, endColor);
+
+        colorAnimation.setDuration(300);
+        colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                view.setBackgroundColor((int) valueAnimator.getAnimatedValue());
+            }
+        });
+        colorAnimation.start();
     }
 
 }
