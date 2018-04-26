@@ -9,7 +9,10 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
 /**
  * Class that initializes the Detail Activity screen.
@@ -27,6 +30,9 @@ public class DetailActivity extends AppCompatActivity {
 
         // Add Back (Up) Functionality
         Utils.activateBackBtn(DetailActivity.this, R.id.detail_back_btn);
+
+        // Add Background on Scroll
+        addActionBarBackground();
 
         // Get Landmark Object
         Landmark thisLandmark = (Landmark) getIntent().getSerializableExtra("serialize_data");
@@ -128,6 +134,25 @@ public class DetailActivity extends AppCompatActivity {
                         (ActivityCompat.checkSelfPermission(DetailActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED)) {
             startActivity(dialIntent);
         }
+    }
+
+    /**
+     * Add Background to the Action Bar, on Scroll, so that the Back Button is visible.
+     */
+    private void addActionBarBackground() {
+        final ScrollView detailScrollView = (ScrollView) findViewById(R.id.detail_scroll_view);
+        final LinearLayout detailActionBar = (LinearLayout) findViewById(R.id.detail_action_bar);
+        detailScrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+            @Override
+            public void onScrollChanged() {
+                int scrollY = detailScrollView.getScrollY();
+                if (scrollY > 100) {
+                    detailActionBar.setBackgroundColor(getResources().getColor(R.color.Yellow));
+                } else {
+                    detailActionBar.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+                }
+            }
+        });
     }
 
 }
