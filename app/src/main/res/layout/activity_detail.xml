@@ -1,175 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Root">
 
-    <RelativeLayout
-        android:id="@+id/detail_container"
-        style="@style/DetailContainer">
+    <ScrollView
+        android:id="@+id/detail_scroll_view"
+        style="@style/DetailScrollView">
 
         <RelativeLayout
-            android:id="@+id/detail_header"
-            style="@style/DetailHeader">
+            android:id="@+id/detail_container"
+            style="@style/DetailContainer">
+
+            <RelativeLayout
+                android:id="@+id/detail_header"
+                style="@style/DetailHeader">
+
+                <ImageView
+                    android:id="@+id/detail_header_image"
+                    tools:src="@drawable/placeholder_image"
+                    android:contentDescription="@string/cd_header_img"
+                    style="@style/DetailHeaderImage" />
+
+                <ImageView
+                    android:id="@+id/detail_header_overlay"
+                    android:contentDescription="@string/cd_header_ovrl"
+                    style="@style/DetailHeaderOverlay" />
+
+                <TextView
+                    android:id="@+id/detail_city"
+                    tools:text="@string/city_name"
+                    style="@style/DetailCityName" />
+
+                <TextView
+                    android:id="@+id/detail_title"
+                    tools:text="@string/placeholder_name"
+                    style="@style/DetailTitle" />
+
+            </RelativeLayout>
 
             <ImageView
-                android:id="@+id/detail_header_image"
-                tools:src="@drawable/placeholder_image"
-                android:contentDescription="@string/cd_header_img"
-                style="@style/DetailHeaderImage" />
+                android:id="@+id/detail_content_bg"
+                android:contentDescription="@string/cd_content_bg"
+                style="@style/DetailContentBackground" />
 
-            <ImageView
-                android:id="@+id/detail_header_overlay"
-                android:contentDescription="@string/cd_header_ovrl"
-                style="@style/DetailHeaderOverlay" />
+            <RelativeLayout
+                android:id="@+id/detail_content"
+                style="@style/DetailContent">
 
-            <ImageButton
-                android:id="@+id/detail_back_btn"
-                android:contentDescription="@string/cd_back_btn"
-                style="@style/DetailBackButton" />
+                <TextView
+                    android:id="@+id/about_section_title"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/about_section_title"
+                    style="@style/DetailContentSectionTitle" />
 
-            <TextView
-                android:id="@+id/detail_city"
-                tools:text="@string/city_name"
-                style="@style/DetailCityName" />
+                <View
+                    android:id="@+id/about_section_divider"
+                    android:layout_below="@id/about_section_title"
+                    style="@style/DetailContentDivider" />
 
-            <TextView
-                android:id="@+id/detail_title"
-                tools:text="@string/placeholder_name"
-                style="@style/DetailTitle" />
+                <TextView
+                    android:id="@+id/about_section_text"
+                    android:layout_below="@id/about_section_divider"
+                    tools:text="@string/placeholder_description"
+                    style="@style/DetailContentText" />
+
+                <View
+                    android:id="@+id/below_about_section_divider"
+                    android:layout_below="@id/about_section_text"
+                    style="@style/DetailContentDivider" />
+
+                <TextView
+                    android:id="@+id/details_section_title"
+                    android:layout_below="@id/below_about_section_divider"
+                    android:text="@string/details_section_title"
+                    style="@style/DetailContentSectionTitle" />
+
+                <View
+                    android:id="@+id/details_section_divider"
+                    android:layout_below="@id/details_section_title"
+                    style="@style/DetailContentDivider" />
+
+                <LinearLayout
+                    android:id="@+id/details_address_container"
+                    android:layout_below="@id/details_section_divider"
+                    style="@style/DetailsInfoContainer">
+
+                    <TextView
+                        android:id="@+id/details_address_title"
+                        android:text="@string/details_address_title"
+                        style="@style/DetailsInfoLineHeading" />
+
+                    <TextView
+                        android:id="@+id/details_address_content"
+                        tools:text="@string/placeholder_address"
+                        style="@style/DetailsInfoLineContent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/details_hours_container"
+                    android:layout_below="@id/details_address_container"
+                    style="@style/DetailsInfoContainer">
+
+                    <TextView
+                        android:id="@+id/details_hours_title"
+                        android:text="@string/details_hours_title"
+                        style="@style/DetailsInfoLineHeading" />
+
+                    <TextView
+                        android:id="@+id/details_hours_content"
+                        tools:text="@string/placeholder_hours"
+                        style="@style/DetailsInfoLineContent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/details_phone_container"
+                    android:layout_below="@id/details_hours_container"
+                    style="@style/DetailsInfoContainer">
+
+                    <TextView
+                        android:id="@+id/details_phone_title"
+                        android:text="@string/details_phone_title"
+                        style="@style/DetailsInfoLineHeading" />
+
+                    <TextView
+                        android:id="@+id/details_phone_content"
+                        tools:text="@string/placeholder_phone"
+                        style="@style/DetailsInfoLineContent" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/detail_content_bg"
-            android:contentDescription="@string/cd_content_bg"
-            style="@style/DetailContentBackground" />
+    </ScrollView>
 
-        <RelativeLayout
-            android:id="@+id/detail_content"
-            style="@style/DetailContent">
+    <LinearLayout
+        android:id="@+id/detail_cta_container"
+        android:baselineAligned="false"
+        style="@style/DetailCtaContainer">
 
-            <TextView
-                android:id="@+id/about_section_title"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:text="@string/about_section_title"
-                style="@style/DetailContentSectionTitle" />
+        <FrameLayout
+            android:id="@+id/detail_call_btn_frame"
+            style="@style/DetailCtaButtonFrame"
+            android:layout_weight="1"
+            android:background="@color/Black">
 
-            <View
-                android:id="@+id/about_section_divider"
-                android:layout_below="@id/about_section_title"
-                style="@style/DetailContentDivider" />
+            <Button
+                android:id="@+id/detail_call_btn"
+                android:text="@string/details_call_btn"
+                style="@style/DetailCtaButton" />
 
-            <TextView
-                android:id="@+id/about_section_text"
-                android:layout_below="@id/about_section_divider"
-                tools:text="@string/placeholder_description"
-                style="@style/DetailContentText" />
+        </FrameLayout>
 
-            <View
-                android:id="@+id/below_about_section_divider"
-                android:layout_below="@id/about_section_text"
-                style="@style/DetailContentDivider" />
+        <FrameLayout
+            android:id="@+id/detail_directions_btn_frame"
+            style="@style/DetailCtaButtonFrame"
+            android:layout_weight="2"
+            android:background="@color/Yellow">
 
-            <TextView
-                android:id="@+id/details_section_title"
-                android:layout_below="@id/below_about_section_divider"
-                android:text="@string/details_section_title"
-                style="@style/DetailContentSectionTitle" />
+            <Button
+                android:id="@+id/detail_directions_btn"
+                android:text="@string/details_directions_btn"
+                style="@style/DetailCtaButton" />
 
-            <View
-                android:id="@+id/details_section_divider"
-                android:layout_below="@id/details_section_title"
-                style="@style/DetailContentDivider" />
+        </FrameLayout>
 
-            <LinearLayout
-                android:id="@+id/details_address_container"
-                android:layout_below="@id/details_section_divider"
-                style="@style/DetailsInfoContainer">
+    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/details_address_title"
-                    android:text="@string/details_address_title"
-                    style="@style/DetailsInfoLineHeading" />
+    <LinearLayout
+        android:id="@+id/detail_action_bar"
+        style="@style/DetailActionBar">
 
-                <TextView
-                    android:id="@+id/details_address_content"
-                    tools:text="@string/placeholder_address"
-                    style="@style/DetailsInfoLineContent" />
+        <ImageButton
+            android:id="@+id/detail_back_btn"
+            android:contentDescription="@string/cd_back_btn"
+            style="@style/DetailBackButton" />
 
-            </LinearLayout>
+    </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/details_hours_container"
-                android:layout_below="@id/details_address_container"
-                style="@style/DetailsInfoContainer">
-
-                <TextView
-                    android:id="@+id/details_hours_title"
-                    android:text="@string/details_hours_title"
-                    style="@style/DetailsInfoLineHeading" />
-
-                <TextView
-                    android:id="@+id/details_hours_content"
-                    tools:text="@string/placeholder_hours"
-                    style="@style/DetailsInfoLineContent" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/details_phone_container"
-                android:layout_below="@id/details_hours_container"
-                style="@style/DetailsInfoContainer">
-
-                <TextView
-                    android:id="@+id/details_phone_title"
-                    android:text="@string/details_phone_title"
-                    style="@style/DetailsInfoLineHeading" />
-
-                <TextView
-                    android:id="@+id/details_phone_content"
-                    tools:text="@string/placeholder_phone"
-                    style="@style/DetailsInfoLineContent" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:id="@+id/detail_cta_container"
-            android:layout_below="@id/detail_content"
-            android:baselineAligned="false"
-            style="@style/DetailCtaContainer">
-
-            <FrameLayout
-                android:id="@+id/detail_call_btn_frame"
-                style="@style/DetailCtaButtonFrame"
-                android:layout_weight="1"
-                android:background="@color/Black">
-
-                <Button
-                    android:id="@+id/detail_call_btn"
-                    android:text="@string/details_call_btn"
-                    style="@style/DetailCtaButton" />
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/detail_directions_btn_frame"
-                style="@style/DetailCtaButtonFrame"
-                android:layout_weight="2"
-                android:background="@color/Yellow">
-
-                <Button
-                    android:id="@+id/detail_directions_btn"
-                    android:text="@string/details_directions_btn"
-                    style="@style/DetailCtaButton" />
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
-</ScrollView>
+</RelativeLayout>
