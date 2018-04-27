@@ -4,11 +4,11 @@ This is just a practice app for [Google Developer Challenge Scholarship: Android
 
 #### [See Video Demo Here](https://youtu.be/J3PJA-C4uz0)
 
-![Tour Guide App Main Screen](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_main_screen.jpg)
-![Tour Guide App Category Screen](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_category_screen.jpg)
+![Tour Guide App Main Screen](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_mainscreen.jpg)
+![Tour Guide App Categories Screen](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_categories.jpg)
 
-![Tour Guide App Item Detail Screen - Top](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_detail_screen_1.jpg)
-![Tour Guide App Item Detail Screen - Bottom](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_detail_screen_2.jpg)
+![Tour Guide App Item Detail Screen - With Call Action](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_detailwcall.jpg)
+![Tour Guide App Item Detail Screen - No Call Action](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_detailnocall.jpg)
 
 ### Working Files Are:
 ##### Manifests
