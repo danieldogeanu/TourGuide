@@ -1,14 +1,11 @@
 package com.danieldogeanu.android.tourguide;
 
-import android.Manifest;
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -132,8 +129,7 @@ public class DetailActivity extends AppCompatActivity {
         Uri phoneNumber = Uri.parse("tel:" + phone);
         Intent dialIntent = new Intent(Intent.ACTION_DIAL);
         dialIntent.setData(phoneNumber);
-        if ((dialIntent.resolveActivity(getPackageManager()) != null) &&
-                        (ActivityCompat.checkSelfPermission(DetailActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED)) {
+        if (dialIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(dialIntent);
         }
     }
