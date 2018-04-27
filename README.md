@@ -1,6 +1,6 @@
 # TourGuide
 
-This is just a practice app for [Google Developer Challenge Scholarship: Android Basics](https://www.udacity.com/google-scholarships). Please ignore.
+This is just a practice app for [Google Developer Scholarship: Android Basics Nanodegree](https://www.udacity.com/google-scholarships). Please ignore.
 
 #### [See Video Demo Here](https://youtu.be/J3PJA-C4uz0)
 
