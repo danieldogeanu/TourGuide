@@ -2,7 +2,7 @@
 
 This is just a practice app for [Google Developer Challenge Scholarship: Android Basics](https://www.udacity.com/google-scholarships). Please ignore.
 
-#### [See Video Demo Here](https://youtu.be/D-Cp-o7TeU4)
+#### [See Video Demo Here](https://youtu.be/J3PJA-C4uz0)
 
 ![Tour Guide App Main Screen](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_main_screen.jpg)
 ![Tour Guide App Category Screen](https://raw.githubusercontent.com/danieldogeanu/TourGuide/master/screenshots/tourguide_category_screen.jpg)
