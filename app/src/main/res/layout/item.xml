@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/cat_bg_image"
         style="@style/CategoryItemBackgroundImage"
-        tools:src="@drawable/placeholder_image"
+        tools:src="@drawable/national_museum_of_romanian_history"
         android:contentDescription="@string/cd_category_item_bg"
         android:tint="@color/TransparentBlack" />
 

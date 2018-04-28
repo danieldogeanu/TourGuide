@@ -17,7 +17,7 @@
 
                 <ImageView
                     android:id="@+id/detail_header_image"
-                    tools:src="@drawable/placeholder_image"
+                    tools:src="@drawable/national_museum_of_romanian_history"
                     android:contentDescription="@string/cd_header_img"
                     style="@style/DetailHeaderImage" />
 
